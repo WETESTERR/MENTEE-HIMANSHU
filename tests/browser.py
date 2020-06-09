@@ -2,6 +2,8 @@ import pytest
 
 from selenium import webdriver
 
+from tests.conftest import baseSetup
+
 
 @pytest.mark.usefixtures("driverSetup")
 class browser():

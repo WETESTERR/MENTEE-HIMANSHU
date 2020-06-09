@@ -1,6 +1,10 @@
 import pytest
 
 from selenium import webdriver
+from webdriver_manager.chrome import ChromeDriverManager
+from webdriver_manager.firefox import GeckoDriverManager
+from webdriver_manager.microsoft import IEDriverManager
+from webdrivermanager import EdgeDriverManager
 
 
 class baseSetup:
@@ -18,11 +22,14 @@ class baseSetup:
 
         browser_name = request.config.getoption("browser_name")
         if browser_name == "chrome":
-            driver = webdriver.Chrome(executable_path="C:\\Users\\Himanshu\\Downloads\\chromedriver.exe")
+            driver = webdriver.Chrome(executable_path=ChromeDriverManager().install())
         elif browser_name == "firefox":
-            driver = webdriver.Firefox(executable_path="path")
+            driver = webdriver.Firefox(executable_path=GeckoDriverManager().install())
         elif browser_name == "IE":
-            driver = webdriver.Ie(executable_path="path")
+            driver = webdriver.Ie(executable_path=IEDriverManager().install())
+        elif browser_name == "Edge":
+            driver = webdriver.Ie(executable_path=EdgeDriverManager().install())
+
 
         request.cls.driver = driver
         yield
