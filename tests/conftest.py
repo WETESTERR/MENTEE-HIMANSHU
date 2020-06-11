@@ -1,39 +1,38 @@
 import pytest
 
-from selenium import webdriver
-from webdriver_manager.chrome import ChromeDriverManager
-from webdriver_manager.firefox import GeckoDriverManager
-from webdriver_manager.microsoft import IEDriverManager
-from webdrivermanager import EdgeDriverManager
+import config
+from utilities.driver import Driver
+
+d = Driver()
 
 
-class baseSetup:
+def pytest_addoption(parser):
+    parser.addoption(
+        "--browser_name", action="store", default="chrome"
+    )
 
-    global driver
+@pytest.fixture(scope='session', autouse=True)
+def browser_name(request):
+    return request.config.getoption("--browser_name")
 
-    def pytest_addoption(parser):
-        parser.addoption(
-            "--browser_name", action="store", default="chrome"
-        )
+@pytest.fixture(scope='session')
+def driver(request,browser_name):
+    _driver = d.get_driver(browser_name)      # _driver is a provate variable for this function only.
+    d.launch_url(config.url,_driver)          #Here we created the global variable d for the class Driver from driver.py file and call the get_driver and launch_url function.
 
-    @pytest.fixture(scope="module")
-    def driverSetup(self,request):
-        self.request = request
-
-        browser_name = request.config.getoption("browser_name")
-        if browser_name == "chrome":
-            driver = webdriver.Chrome(executable_path=ChromeDriverManager().install())
-        elif browser_name == "firefox":
-            driver = webdriver.Firefox(executable_path=GeckoDriverManager().install())
-        elif browser_name == "IE":
-            driver = webdriver.Ie(executable_path=IEDriverManager().install())
-        elif browser_name == "Edge":
-            driver = webdriver.Ie(executable_path=EdgeDriverManager().install())
+   #def teardown():
+    #    d.quit_driver(_driver)
+    #request.add_finalizer(teardown)
 
 
-        request.cls.driver = driver
-        yield
-        driver.close()
+
+
+
+
+
+
+
+
 
 
 
