@@ -1,7 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="966206de-cd1e-4e03-9af9-07b30ed6ce10" name="Default Changelist" comment="" />
+    <list default="true" id="966206de-cd1e-4e03-9af9-07b30ed6ce10" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/tests/test_login.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/.pytest_cache/CACHEDIR.TAG" beforeDir="false" afterPath="$PROJECT_DIR$/tests/.pytest_cache/CACHEDIR.TAG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/.pytest_cache/v/cache/lastfailed" beforeDir="false" afterPath="$PROJECT_DIR$/tests/.pytest_cache/v/cache/lastfailed" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/.pytest_cache/v/cache/nodeids" beforeDir="false" afterPath="$PROJECT_DIR$/tests/.pytest_cache/v/cache/nodeids" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/accountRegister.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/conftest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/requirements.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_browser.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_browser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/.pytest_cache/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/.pytest_cache/CACHEDIR.TAG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/.pytest_cache/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/.pytest_cache/v/cache/nodeids" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/.pytest_cache/v/cache/stepwise" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,12 +32,15 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="driver" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1d0n8LYcNaY7UjLHReL691ZCmEi" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -39,7 +57,7 @@
       <recent name="C:\Users\Himanshu\Python_Framework\MENTEE-HIMANSHU" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.log">
+  <component name="RunManager" selected="Python.test_login">
     <configuration name="accountRegister" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="MENTEE-HIMANSHU" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -74,27 +92,6 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tests/conftest.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="driver" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="MENTEE-HIMANSHU" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/utilities" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:\Users\Himanshu\Python_Framework\MENTEE-HIMANSHU\utilities\driver.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -145,6 +142,27 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="test_login" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="MENTEE-HIMANSHU" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tests/test_login.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="pytest in log.py" type="tests" factoryName="py.test" nameIsGenerated="true">
       <module name="MENTEE-HIMANSHU" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -179,20 +197,20 @@
     </configuration>
     <list>
       <item itemvalue="Python.conftest" />
-      <item itemvalue="Python.driver" />
       <item itemvalue="Python.log" />
-      <item itemvalue="Python tests.pytest in log.py" />
       <item itemvalue="Python.accountRegister" />
       <item itemvalue="Python.test_browser" />
+      <item itemvalue="Python tests.pytest in log.py" />
       <item itemvalue="Python tests.pytest in test_browser.py" />
+      <item itemvalue="Python.test_login" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.test_login" />
         <item itemvalue="Python.log" />
         <item itemvalue="Python.accountRegister" />
         <item itemvalue="Python.test_browser" />
         <item itemvalue="Python.conftest" />
-        <item itemvalue="Python.driver" />
       </list>
     </recent_temporary>
   </component>
@@ -238,13 +256,13 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1345" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1591841280118" />
-    <state x="184" y="8" key="SettingsEditor" timestamp="1591837351159">
+    <state x="184" y="8" key="SettingsEditor" timestamp="1591922323097">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="184" y="8" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1591837351159" />
-    <state x="275" y="96" key="Vcs.Push.Dialog.v2" timestamp="1591664598908">
+    <state x="184" y="8" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1591922323097" />
+    <state x="275" y="96" key="Vcs.Push.Dialog.v2" timestamp="1591905232764">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="96" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1591664598908" />
+    <state x="275" y="96" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1591905232764" />
   </component>
 </project>

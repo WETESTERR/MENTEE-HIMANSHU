@@ -1,3 +1,4 @@
 [
-  "test_browser.py::TestBrowser::test_sample"
+  "test_browser.py::TestBrowser::test_sample",
+  "test_login.py::TestLogin::test_login"
 ]
