@@ -1,4 +1,3 @@
-C:\Users\Himanshu\Python_Framework\MENTEE-HIMANSHU\utilities\__pycache__
-C:\Users\Himanshu\Python_Framework\MENTEE-HIMANSHU\tests\__pycache__
-C:\Users\Himanshu\Python_Framework\MENTEE-HIMANSHU\page_objects\__pycache__
-C:\Users\Himanshu\Python_Framework\MENTEE-HIMANSHU\.idea
+__pycache__\
+*.pyc
+.idea
