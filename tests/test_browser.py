@@ -1,7 +1,10 @@
 import pytest
 
+from tests.conftest import driver
+
 
 class TestBrowser:
-    @pytest.mark.skip(reason="I do not want to run.")
+
+    @pytest.mark.skip("Just a Test Browser.")
     def test_sample(self,driver):
         pass

@@ -25,12 +25,12 @@ class Driver:
             raise RuntimeError("Browser not found : {}".format(browser_name))  #If there is a spelling error while entering the browser_name, this exception will invoke.
         return driver
 
-#These are dummy functions to call the url from config.py file and driver.
+#These are functions to call the url from config.py file and driver.
     def launch_url(self,url,driver):
         driver.get(url)
         driver.maximize_window()
 
-#This is a dummy function to quit the driver.
+
     def quit_driver(self,driver):
         driver.quit()
 
