@@ -1,9 +1,11 @@
+import pytest
+
 from page_objects.login import Login
 
 
 
 
-class TestLogin:
+class TestLogin():
 
     def test_login(self,driver,email,password):
 
