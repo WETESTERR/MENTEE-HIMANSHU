@@ -1,1 +1,3 @@
-{}
+{
+  "test_searchitem.py::TestSearchItem::test_searchbar": true
+}

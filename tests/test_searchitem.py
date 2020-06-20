@@ -10,10 +10,15 @@ from utilities import driver
 
 class TestSearchItem:
 
-    def test_searchbar(self,driver):
 
+    def test_searchbar(self,driver):
+        l = Login(driver)
         c = Common(driver)
         c.driver_wait(wait_time)
-        #c.click(By.ID,"search_query_top")
-        c.enter_text(By.ID,"search_query_top",text='iPhone')
+        c.enter_text(By.ID,"search_query_top",text='Printed Dress')
+        c.click(By.XPATH, "//button[@name='submit_search']")
+        l.items()
+        l.select_items()
+
+
 
