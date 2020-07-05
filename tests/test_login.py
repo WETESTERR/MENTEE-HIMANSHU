@@ -13,7 +13,8 @@ class TestLogin():
 
         l.navigate_to_login_page()
         l.login(email,password)
-        l.logout()
+
+
 
 
 

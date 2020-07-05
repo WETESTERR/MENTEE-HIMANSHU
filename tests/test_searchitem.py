@@ -10,7 +10,7 @@ from utilities import driver
 
 class TestSearchItem:
 
-
+    @pytest.mark.skip("Just a Test Browser.")
     def test_searchbar(self,driver):
         l = Login(driver)
         c = Common(driver)
