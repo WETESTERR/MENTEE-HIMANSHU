@@ -39,3 +39,20 @@ class LocatorStrategy:
     def locator_by_partial_link_text(name):
         locator_strategy = LocatorStrategy(name, 'partial_link_text')
         return locator_strategy
+
+    @staticmethod
+    def locator_by_index(name):
+        locator_strategy = LocatorStrategy(name, 'index')
+        return locator_strategy
+
+    @staticmethod
+    def locator_by_value(name):
+        locator_strategy = LocatorStrategy(name, 'value')
+        return locator_strategy
+
+    @staticmethod
+    def locator_by_visible_text(name):
+        locator_strategy = LocatorStrategy(name, 'visible_text')
+        return locator_strategy
+
+
