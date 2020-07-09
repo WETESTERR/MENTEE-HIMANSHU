@@ -2,11 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="26f94cd8-1733-4e07-a2ac-67d3775b5a31" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/MENTEE-HIMANSHU.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/MENTEE-HIMANSHU.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities/log.py" beforeDir="false" afterPath="$PROJECT_DIR$/utilities/log.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/MENTEE-HIMANSHU.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,25 +76,29 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="392" y="0" key="#log/0.0.1366.728@0.0.1366.728" timestamp="1594259249521" />
-    <state width="1345" height="102" key="GridCell.Tab.0.bottom" timestamp="1594258687678">
+    <state width="1345" height="179" key="GridCell.Tab.0.bottom" timestamp="1594259435677">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="102" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1594258687678" />
-    <state width="1345" height="102" key="GridCell.Tab.0.center" timestamp="1594258687678">
+    <state width="1345" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1594259435677" />
+    <state width="1345" height="179" key="GridCell.Tab.0.center" timestamp="1594259435675">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="102" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1594258687678" />
-    <state width="1345" height="102" key="GridCell.Tab.0.left" timestamp="1594258687678">
+    <state width="1345" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1594259435675" />
+    <state width="1345" height="179" key="GridCell.Tab.0.left" timestamp="1594259435675">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="102" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1594258687678" />
-    <state width="1345" height="102" key="GridCell.Tab.0.right" timestamp="1594258687678">
+    <state width="1345" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1594259435675" />
+    <state width="1345" height="179" key="GridCell.Tab.0.right" timestamp="1594259435676">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="102" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1594258687678" />
+    <state width="1345" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1594259435676" />
     <state x="184" y="8" key="SettingsEditor" timestamp="1594259053864">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="184" y="8" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1594259053864" />
+    <state x="275" y="96" key="Vcs.Push.Dialog.v2" timestamp="1594260564523">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="96" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1594260564523" />
   </component>
 </project>
