@@ -4,7 +4,7 @@ import sys
 def logs():
     logger = logging.getLogger(__name__)
 
-    formatter = logging.Formatter("%(asctime)s :%(levelname)s :%(name) :%(message)")  # Message format.
+    formatter = logging.Formatter("%(asctime)s :%(levelname)s :%(name)s :%(message)s")  # Message format.
     file_Handler = logging.FileHandler('logfile.log') #This is to create a log file in the folder.
 
 
