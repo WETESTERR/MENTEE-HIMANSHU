@@ -25,10 +25,10 @@ class Common:
         _element = self.get_element(locatorobject)
         if _element:
             _element.click()
-            #TODO include log statement
+
         else:
             pytest.fail('Element not found \n{}'.format(traceback.format_exc()))
-            #TODO try other traceback methods
+
 
     def enter_text(self,locatorobject,text):
         _element = self.get_element(locatorobject)
@@ -43,7 +43,6 @@ class Common:
     def switch_frame(self,value):
         self.driver.switch_to.frame(value)
 
-    # TODO create one drop_down method with the locator_strategy
 
     def drop_down(self,locatorobject):
         _element = self.get_element(locatorobject)
@@ -57,7 +56,7 @@ class Common:
         self.driver.switch_to_window(text)
         self.driver.switch_to_default_content()
 
-    def verify_text(self,validateText,locatorobject):
+    def verify_text_present(self,validateText,locatorobject):
         _element = self.get_element(locatorobject)
         if _element:
             gettext = _element.text
@@ -108,4 +107,4 @@ class Common:
         elif locatorobject.strategy == 'visible_text':
             return self.driver.find_element_by_visible_text(locatorobject.name)
 
-        #TODO Implement for all other locators from locator_strategy
+

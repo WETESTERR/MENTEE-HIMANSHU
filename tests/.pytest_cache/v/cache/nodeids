@@ -1,6 +1,0 @@
-[
-  "test_browser.py::TestBrowser::test_sample",
-  "test_login.py::TestLogin::test_login",
-  "test_searchitem.py::TestSearchItem::test_searchbar",
-  "test_searchitem.py::TestLogin::test_login"
-]

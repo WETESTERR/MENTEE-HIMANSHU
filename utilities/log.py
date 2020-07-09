@@ -1,15 +1,18 @@
 import logging
 import sys
 
-def testLogs():
+def logs():
     logger = logging.getLogger(__name__)
 
-    fileHandler = logging.FileHandler("logfile.log") #This is to create a log file in the folder.
+    formatter = logging.Formatter("%(asctime)s :%(levelname)s :%(name) :%(message)")  # Message format.
+    file_Handler = logging.FileHandler('logfile.log') #This is to create a log file in the folder.
 
-    formatter = logging.Formatter("%(asctime)s :%(levelname)s :%(name) :%(message)")  #Message format.
-    handler = logging.StreamHandler(sys.stdout)
-    handler.setFormatter(formatter)   #This is going to output the message in testLogs.log file.
-    logger.addHandler(handler)    #This will handle the logger file.
+
+    file_Handler.setFormatter(formatter)   #This is going to output the message in testLogs.log file.
+    logger.addHandler(file_Handler)    #This will handle the logger file.
+
+    logging.basicConfig(filename='logfile123.log',level=logging.info(),
+                        format='%(asctime)s :%(levelname)s :%(name) :%(message)')
 
     #logger.setLevel(logging.info())
     logger.debug("A debug statement is executed.")

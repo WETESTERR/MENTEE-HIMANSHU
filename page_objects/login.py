@@ -16,7 +16,7 @@ class Login(Common):
         super().__init__(driver)
         self.driver = driver
 
-    # TODO Similarly we have to create the other fields like email_field
+
 
     login_button = LocatorStrategy.locator_by_xpath("//a[@class='login']")
     email_field = LocatorStrategy.locator_by_id("email")
@@ -30,7 +30,7 @@ class Login(Common):
 
     def login(self,email,password):
         self.driver_wait(wait_time)
-        self.enter_text(Login.email_field,text=email)  #This is just an example. Implement all in similar way.
+        self.enter_text(Login.email_field,text=email)
         self.enter_text(Login.password_field,text=password)
         self.click(Login.submit_button)
 
