@@ -13,8 +13,8 @@ def pytest_addoption(parser):
     parser.addoption(
         "--browser_name", action="store", default="chrome"
     )
-    parser.addoption("--email",action = "store")
-    parser.addoption("--password", action="store")
+    parser.addoption("--email",action = "store",required=True)
+    parser.addoption("--password", action="store",required=True)
 
 @pytest.fixture(scope='session', autouse=True)
 def browser_name(request):

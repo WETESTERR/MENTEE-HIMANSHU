@@ -8,6 +8,7 @@ from config import sleep_time, wait_time
 from page_objects.common import Common
 from utilities import driver
 from utilities.locator_strategy import LocatorStrategy
+from utilities.log import Logs
 
 
 class Login(Common):
