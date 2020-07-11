@@ -6,7 +6,7 @@ import pytest
 
 class Logs():
 
-    def logs(self):
+    def logger(self):
 
         if not os.path.exists('C:\\Users\\Himanshu\\Python_Framework\\MENTEE-HIMANSHU\\logs'):
             os.mkdir('C:\\Users\\Himanshu\\Python_Framework\\MENTEE-HIMANSHU\\logs')
@@ -20,8 +20,6 @@ class Logs():
         file_Handler.setFormatter(formatter)   #This is going to output the message in testLogs.log file.
 
         logger.addHandler(file_Handler)    #This will handle the logger file.
-
-
 
         logger.debug("A debug statement is executed.")
         logger.info("Information statement about the errors.")

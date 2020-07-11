@@ -11,11 +11,12 @@ from utilities.locator_strategy import LocatorStrategy
 from utilities.log import Logs
 
 
-class Login(Common):
+class Login(Common,Logs):
 
     def __init__(self, driver):
         super().__init__(driver)
         self.driver = driver
+        self.log = self.logger()
 
 
 
@@ -26,17 +27,17 @@ class Login(Common):
     logout_button = LocatorStrategy.locator_by_css_selector("a[class='logout']")
 
     def navigate_to_login_page(self):
-        self.click(Login.login_button)
+        self.log.info(self.click(Login.login_button))
         self.time_sleep(sleep_time)
 
     def login(self,email,password):
         self.driver_wait(wait_time)
-        self.enter_text(Login.email_field,text=email)
-        self.enter_text(Login.password_field,text=password)
-        self.click(Login.submit_button)
+        self.log.info(self.enter_text(Login.email_field,text=email))
+        self.log.info(self.enter_text(Login.password_field,text=password))
+        self.log.info(self.click(Login.submit_button))
 
     def logout(self):
-        self.click(Login.logout_button)
+        self.log.info(self.click(Login.logout_button))
 
 
 

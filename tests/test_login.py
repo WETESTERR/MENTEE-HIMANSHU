@@ -9,7 +9,7 @@ from utilities.log import Logs
 class TestLogin(Logs):
 
     def test_login(self,driver,email,password):
-        log = self.logs()
+        log = self.logger()
 
         l = Login(driver)
         log.info(l)

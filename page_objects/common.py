@@ -2,24 +2,30 @@ import time
 import traceback
 
 import pytest
+
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import Select
 from selenium.webdriver import ActionChains
-from utilities import driver
+from utilities import driver, log
 import config
+from utilities.log import Logs
 
 
-class Common:
+
+class Common(Logs):
 
     def __init__(self,driver):
         self.driver = driver
+        self.log = self.logger()
+
+
 
     def driver_wait(self,wait_time):
-        WebDriverWait(self.driver,wait_time)
+        self.log.info(WebDriverWait(self.driver, wait_time))
 
     def time_sleep(self,sleep_time):
-        time.sleep(sleep_time)
+        self.log.info(time.sleep(sleep_time))
 
     def click(self,locatorobject):
         _element = self.get_element(locatorobject)
@@ -29,6 +35,7 @@ class Common:
         else:
             pytest.fail('Element not found \n{}'.format(traceback.format_exc()))
 
+        self.log.info(_element)
 
     def enter_text(self,locatorobject,text):
         _element = self.get_element(locatorobject)
@@ -36,12 +43,14 @@ class Common:
             _element.send_keys(text)
         else:
             pytest.fail('Element not found \n{}'.format(traceback.format_stack()))
+        self.log.info(_element)
 
     def verify_link_presence(self,wait_time,text,*locator):
-        WebDriverWait(self.driver,wait_time).until(EC.presence_of_element_located((*locator,text)))
+        self.log.info(WebDriverWait(self.driver,wait_time).until(EC.presence_of_element_located((*locator,text))))
+
 
     def switch_frame(self,value):
-        self.driver.switch_to.frame(value)
+        self.log.info(self.driver.switch_to.frame(value))
 
 
     def drop_down(self,locatorobject):
@@ -50,10 +59,11 @@ class Common:
             Select(_element)
         else:
             pytest.fail('Element not found \n{}'.format(traceback.extract_stack()))
+        self.log.info(_element)
 
 
     def switch_window(self,text):
-        self.driver.switch_to_window(text)
+        self.log.info(self.driver.switch_to_window(text))
         self.driver.switch_to_default_content()
 
     def verify_text_present(self,validateText,locatorobject):
@@ -63,6 +73,7 @@ class Common:
             assert validateText in gettext
         else:
             pytest.fail('Element not found \n{}'.format(traceback.format_exc()))
+        self.log.info(_element)
 
     def verify_exact_text(self,validateText,locatorobject):
         _element = self.get_element(locatorobject)
@@ -71,13 +82,16 @@ class Common:
             assert validateText == gettext
         else:
             pytest.fail('Element not found \n{}'.format(traceback.format_exc()))
+        self.log.info(_element)
 
     def drag_drop(self,source,target):
         source_element = self.driver.find_element_by_name(source)
+        self.log.info(source_element)
         target_element = self.driver.find_element_by_name(target)
+        self.log.info(target_element)
 
         action_chains = ActionChains(driver)
-        action_chains.drag_and_drop(source_element,target_element).perform()
+        self.log.info(action_chains.drag_and_drop(source_element,target_element).perform())
 
     def log_test_start(self):
         pass
