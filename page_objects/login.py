@@ -27,17 +27,17 @@ class Login(Common,Logs):
     logout_button = LocatorStrategy.locator_by_css_selector("a[class='logout']")
 
     def navigate_to_login_page(self):
-        self.log.info(self.click(Login.login_button))
-        self.time_sleep(sleep_time)
+        self.log.info("Clicked on Login page{}".format(self.click(Login.login_button)))
+        self.log.info("Sleep time{}".format(self.time_sleep(sleep_time)))
 
     def login(self,email,password):
-        self.driver_wait(wait_time)
-        self.log.info(self.enter_text(Login.email_field,text=email))
-        self.log.info(self.enter_text(Login.password_field,text=password))
-        self.log.info(self.click(Login.submit_button))
+        self.log.info("Driver wait{}".format(self.driver_wait(wait_time)))
+        self.log.info("Entered the email{}".format(self.enter_text(Login.email_field,text=email)))
+        self.log.info("Entered the password{}".format(self.enter_text(Login.password_field,text=password)))
+        self.log.info("Clicked the submit button{}".format(self.click(Login.submit_button)))
 
     def logout(self):
-        self.log.info(self.click(Login.logout_button))
+        self.log.info("Clicked the logout button{}".format(self.click(Login.logout_button)))
 
 
 
