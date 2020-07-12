@@ -14,9 +14,11 @@ class Logs():
         logger = logging.getLogger(__name__)
         logger.setLevel(logging.DEBUG)
 
+
         formatter = logging.Formatter("%(asctime)s :%(levelname)s :%(name)s :%(message)s")  # Message format.
 
-        file_Handler = logging.FileHandler('C:\\Users\\Himanshu\\Python_Framework\\MENTEE-HIMANSHU\\logs\\logfile.log') #This is to create a log file in the folder.
+        file_Handler = logging.FileHandler('C:\\Users\\Himanshu\\Python_Framework\\MENTEE-HIMANSHU\\logs\\logfile.log','w') #This is to create a log file in the folder.
+
         file_Handler.setFormatter(formatter)   #This is going to output the message in testLogs.log file.
 
         logger.addHandler(file_Handler)    #This will handle the logger file.
