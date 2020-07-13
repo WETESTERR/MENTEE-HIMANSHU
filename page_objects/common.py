@@ -52,10 +52,11 @@ class Common(Logs):
 
 
     def switch_frame(self,value):
+        self.driver.switch_to.frame(value)
         self.log.info("Switch frame value {}".format(self.driver.switch_to.frame(value)))
 
 
-    def drop_down(self,locatorobject):
+    def select_option_from_drop_down(self,locatorobject):
         _element = self.get_element(locatorobject)
         if _element:
             Select(_element)
@@ -73,18 +74,20 @@ class Common(Logs):
         if _element:
             gettext = _element.text
             assert validateText in gettext
+            self.log.info("Verifying the presence of text {}".format(locatorobject.name))
         else:
             pytest.fail('Element not found \n{}'.format(traceback.format_exc()))
-        self.log.info("Verifying the presence of text {}".format(locatorobject.name))
+
 
     def verify_exact_text(self,validateText,locatorobject):
         _element = self.get_element(locatorobject)
         if _element:
             gettext = _element.text
             assert validateText == gettext
+            self.log.info("Verifying the exact text {}".format(locatorobject.name))
         else:
             pytest.fail('Element not found \n{}'.format(traceback.format_exc()))
-        self.log.info("Verifying the exact text {}".format(locatorobject.name))
+
 
     def drag_drop(self,source,target):
         source_element = self.driver.find_element_by_name(source)
