@@ -33,19 +33,21 @@ class Common(Logs):
         _element = self.get_element(locatorobject)
         if _element:
             _element.click()
-
+            self.log.info("Clicked on the element {}".format(locatorobject.name))
         else:
+            self.log.error('Element not found \n{}'.format(traceback.format_exc()))
             pytest.fail('Element not found \n{}'.format(traceback.format_exc()))
 
-        self.log.info("Clicked on the element {}".format(locatorobject.name))
 
     def enter_text(self,locatorobject,text):
         _element = self.get_element(locatorobject)
         if _element:
             _element.send_keys(text)
+            self.log.info("Entered text element {}".format(locatorobject.name))
         else:
+            self.log.error('Element not found \n{}'.format(traceback.format_stack()))
             pytest.fail('Element not found \n{}'.format(traceback.format_stack()))
-        self.log.info("Entered text element {}".format(locatorobject.name))
+
 
     def verify_link_presence(self,wait_time,text,*locator):
         self.log.info("Verifying the presence of link {}".format(WebDriverWait(self.driver,wait_time).until(EC.presence_of_element_located((*locator,text)))))
@@ -60,9 +62,11 @@ class Common(Logs):
         _element = self.get_element(locatorobject)
         if _element:
             Select(_element)
+            self.log.info("Drop down element {}".format(locatorobject.name))
         else:
+            self.log.error('Element not found \n{}'.format(traceback.extract_stack()))
             pytest.fail('Element not found \n{}'.format(traceback.extract_stack()))
-        self.log.info("Drop down element {}".format(locatorobject.name))
+
 
 
     def switch_window(self,text):
@@ -76,6 +80,7 @@ class Common(Logs):
             assert validateText in gettext
             self.log.info("Verifying the presence of text {}".format(locatorobject.name))
         else:
+            self.log.error('Element not found \n{}'.format(traceback.format_stack()))
             pytest.fail('Element not found \n{}'.format(traceback.format_exc()))
 
 
@@ -86,6 +91,7 @@ class Common(Logs):
             assert validateText == gettext
             self.log.info("Verifying the exact text {}".format(locatorobject.name))
         else:
+            self.log.error('Element not found \n{}'.format(traceback.format_exc()))
             pytest.fail('Element not found \n{}'.format(traceback.format_exc()))
 
 
@@ -126,4 +132,6 @@ class Common(Logs):
         elif locatorobject.strategy == 'visible_text':
             return self.driver.find_element_by_visible_text(locatorobject.name)
 
+    def get_screenshot(self,file_name):
+        self.driver.get_screenshot_as_file(file_name)
 
