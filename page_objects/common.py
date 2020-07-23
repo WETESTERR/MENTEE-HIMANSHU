@@ -1,7 +1,9 @@
 import time
 import traceback
 
+import allure
 import pytest
+from allure_commons.types import AttachmentType
 
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
@@ -133,5 +135,15 @@ class Common(Logs):
             return self.driver.find_element_by_visible_text(locatorobject.name)
 
     def get_screenshot(self,file_name):
-        self.driver.get_screenshot_as_file(file_name)
+        allure.attach(self.driver.get_screenshot_as_png(),name = file_name, attachment_type=AttachmentType.PNG)
+
+
+    def verify_element_present(self,locatorobject):
+        _element = self.get_element(locatorobject)
+        if _element:
+            self.log.info("Verifying the exact element text {}".format(locatorobject.name))
+        else:
+            self.log.error('Element not found \n{}'.format(traceback.format_exc()))
+            pytest.fail('Element not found \n{}'.format(traceback.format_exc()))
+
 

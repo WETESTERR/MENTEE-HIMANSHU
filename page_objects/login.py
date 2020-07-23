@@ -9,16 +9,16 @@ from config import sleep_time, wait_time
 from page_objects.common import Common
 from utilities import driver
 from utilities.locator_strategy import LocatorStrategy
-from utilities.log import Logs
 
 
 
-class Login(Common,Logs):
+
+class Login(Common):
 
     def __init__(self, driver):
         super().__init__(driver)
         self.driver = driver
-        self.log = self.logger()
+
 
 
 
@@ -30,6 +30,7 @@ class Login(Common,Logs):
 
     def navigate_to_login_page(self):
         self.click(Login.login_button)
+        self.get_screenshot(file_name="Login_page")
         self.time_sleep(sleep_time)
 
     def login_verify(self,email,password):
@@ -37,10 +38,10 @@ class Login(Common,Logs):
         self.enter_text(Login.email_field, text=email)
         self.enter_text(Login.password_field, text=password)
         self.click(Login.submit_button)
+        self.verify_element_present(Login.logout_button)
 
     def logout(self):
         self.click(Login.logout_button)
-        self.get_screenshot("Logout.png")
 
 
 
