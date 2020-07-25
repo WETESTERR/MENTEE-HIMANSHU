@@ -1,0 +1,16 @@
+[32mINFO    [0m WDM:logger.py:24 Current google-chrome version is 83.0.4103
+[32mINFO    [0m WDM:logger.py:14 Get LATEST driver version for 83.0.4103
+[32mINFO    [0m WDM:logger.py:14 Get LATEST driver version for 83.0.4103
+[32mINFO    [0m WDM:logger.py:14 Trying to download new driver from http://chromedriver.storage.googleapis.com/83.0.4103.39/chromedriver_win32.zip
+[32mINFO    [0m WDM:logger.py:14 Driver has been saved in cache [C:\Users\Himanshu\.wdm\drivers\chromedriver\win32\83.0.4103.39]
+[32mINFO    [0m utilities.log:test_login.py:15 <page_objects.login.Login object at 0x047BEF70>
+[32mINFO    [0m utilities.log:common.py:40 Clicked on the element //a[@class='login']
+[32mINFO    [0m utilities.log:login.py:30 Clicked on Login page None
+[32mINFO    [0m utilities.log:common.py:30 Sleep time 5
+[32mINFO    [0m utilities.log:common.py:26 Webdriver wait 10
+[32mINFO    [0m utilities.log:common.py:48 Entered text element email
+[32mINFO    [0m utilities.log:login.py:36 Entered the email hse002@gmail.com
+[32mINFO    [0m utilities.log:common.py:48 Entered text element passwd
+[32mINFO    [0m utilities.log:login.py:38 Entered the password abc@123
+[32mINFO    [0m utilities.log:common.py:40 Clicked on the element SubmitLogin
+[32mINFO    [0m utilities.log:login.py:39 Clicked the submit button None

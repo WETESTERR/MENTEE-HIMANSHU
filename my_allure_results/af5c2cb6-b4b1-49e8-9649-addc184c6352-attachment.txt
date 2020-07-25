@@ -1,0 +1,10 @@
+[32mINFO    [0m WDM:logger.py:24 Current google-chrome version is 83.0.4103
+[32mINFO    [0m WDM:logger.py:14 Get LATEST driver version for 83.0.4103
+[32mINFO    [0m WDM:logger.py:14 Driver [C:\Users\Himanshu\.wdm\drivers\chromedriver\win32\83.0.4103.39\chromedriver.exe] found in cache
+[32mINFO    [0m utilities.log:test_login.py:17 <page_objects.login.Login object at 0x03F84268>
+[32mINFO    [0m utilities.log:common.py:38 Clicked on the element //a[@class='login']
+[32mINFO    [0m utilities.log:common.py:32 Sleep time 5
+[32mINFO    [0m utilities.log:common.py:28 Webdriver wait 10
+[32mINFO    [0m utilities.log:common.py:48 Entered text element email
+[32mINFO    [0m utilities.log:common.py:48 Entered text element passwd
+[32mINFO    [0m utilities.log:common.py:38 Clicked on the element SubmitLogin
