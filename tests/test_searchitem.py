@@ -8,10 +8,10 @@ from page_objects.login import Login
 from utilities import driver
 import allure
 
-allure.feature('Search Item')
+@allure.feature('Search Item')
 class TestSearchItem:
 
-
+    @allure.story('Search the item')
     def test_searchbar(self,driver):
         l = Login(driver)
         c = Common(driver)

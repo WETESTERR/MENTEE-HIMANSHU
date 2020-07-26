@@ -6,10 +6,10 @@ from utilities.log import Logs
 
 
 
-#@allure.feature('Login Feature')
+@allure.feature('Login Feature')
 class TestLogin(Logs):
 
-    #@allure.story('Login functions')
+    @allure.story('Login functions')
     def test_login(self,driver,email,password):
         log = self.logger()
 
