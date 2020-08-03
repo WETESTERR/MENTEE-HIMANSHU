@@ -38,23 +38,7 @@ def email(request):
 def password(request):
     return request.config.getoption("--password")
 
-
-
-
-
-
-
-
-
-
-
-
-
-from selenium import webdriver
-
-
 @pytest.mark.usefixtures("driversetup")
-
 def browser(self,driver):
     return self.driver.get("http://automationpractice.com/index.php")
     return self.driver.maximize_window()

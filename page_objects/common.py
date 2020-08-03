@@ -6,32 +6,30 @@ import pytest
 from allure_commons.types import AttachmentType
 
 from selenium.webdriver.support.wait import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.support import expected_conditions as ec
 from selenium.webdriver.support.ui import Select
 from selenium.webdriver import ActionChains
-from utilities import driver, log
-import config
-from utilities.log import Logs
+from utilities import driver
 
+from utilities.log import Logs
 
 
 class Common(Logs):
 
-    def __init__(self,driver):
+    def __init__(self, driver):
         self.driver = driver
         self.log = self.logger()
 
 
-
-    def driver_wait(self,wait_time):
+    def driver_wait(self, wait_time):
         WebDriverWait(self.driver, wait_time)
         self.log.info("Webdriver wait {}".format(wait_time))
 
-    def time_sleep(self,sleep_time):
+    def time_sleep(self, sleep_time):
         time.sleep(sleep_time)
         self.log.info("Sleep time {}".format(sleep_time))
 
-    def click(self,locatorobject):
+    def click(self, locatorobject):
         _element = self.get_element(locatorobject)
         if _element:
             _element.click()
@@ -40,8 +38,7 @@ class Common(Logs):
             self.log.error('Element not found \n{}'.format(traceback.format_exc()))
             pytest.fail('Element not found \n{}'.format(traceback.format_exc()))
 
-
-    def enter_text(self,locatorobject,text):
+    def enter_text(self, locatorobject, text):
         _element = self.get_element(locatorobject)
         if _element:
             _element.send_keys(text)
@@ -50,17 +47,15 @@ class Common(Logs):
             self.log.error('Element not found \n{}'.format(traceback.format_stack()))
             pytest.fail('Element not found \n{}'.format(traceback.format_stack()))
 
+    def verify_link_presence(self, wait_time, text, *locator):
+        self.log.info("Verifying the presence of link {}".format(
+            WebDriverWait(self.driver, wait_time).until(ec.presence_of_element_located((*locator, text)))))
 
-    def verify_link_presence(self,wait_time,text,*locator):
-        self.log.info("Verifying the presence of link {}".format(WebDriverWait(self.driver,wait_time).until(EC.presence_of_element_located((*locator,text)))))
-
-
-    def switch_frame(self,value):
+    def switch_frame(self, value):
         self.driver.switch_to.frame(value)
         self.log.info("Switch frame value {}".format(self.driver.switch_to.frame(value)))
 
-
-    def select_option_from_drop_down(self,locatorobject):
+    def select_option_from_drop_down(self, locatorobject):
         _element = self.get_element(locatorobject)
         if _element:
             Select(_element)
@@ -69,42 +64,38 @@ class Common(Logs):
             self.log.error('Element not found \n{}'.format(traceback.extract_stack()))
             pytest.fail('Element not found \n{}'.format(traceback.extract_stack()))
 
-
-
-    def switch_window(self,text):
+    def switch_window(self, text):
         self.log.info("Window switch {}".format(self.driver.switch_to_window(text)))
         self.driver.switch_to_default_content()
 
-    def verify_text_present(self,validateText,locatorobject):
+    def verify_text_present(self, validatetext, locatorobject):
         _element = self.get_element(locatorobject)
         if _element:
             gettext = _element.text
-            assert validateText in gettext
+            assert validatetext in gettext
             self.log.info("Verifying the presence of text {}".format(locatorobject.name))
         else:
             self.log.error('Element not found \n{}'.format(traceback.format_stack()))
             pytest.fail('Element not found \n{}'.format(traceback.format_exc()))
 
-
-    def verify_exact_text(self,validateText,locatorobject):
+    def verify_exact_text(self, validatetext, locatorobject):
         _element = self.get_element(locatorobject)
         if _element:
             gettext = _element.text
-            assert validateText == gettext
+            assert validatetext == gettext
             self.log.info("Verifying the exact text {}".format(locatorobject.name))
         else:
             self.log.error('Element not found \n{}'.format(traceback.format_exc()))
             pytest.fail('Element not found \n{}'.format(traceback.format_exc()))
 
-
-    def drag_drop(self,source,target):
+    def drag_drop(self, source, target):
         source_element = self.driver.find_element_by_name(source)
         self.log.info("Grabbed the source element {}".format(source_element))
         target_element = self.driver.find_element_by_name(target)
         self.log.info("Grabbed the target element {}".format(target_element))
 
         action_chains = ActionChains(driver)
-        self.log.info("Drag and Drop {}".format(action_chains.drag_and_drop(source_element,target_element).perform()))
+        self.log.info("Drag and Drop {}".format(action_chains.drag_and_drop(source_element, target_element).perform()))
 
     def log_test_start(self):
         pass
@@ -112,7 +103,7 @@ class Common(Logs):
     def log_test_end(self):
         pass
 
-    def get_element(self,locatorobject):
+    def get_element(self, locatorobject):
         if locatorobject.strategy == 'id':
             return self.driver.find_element_by_id(locatorobject.name)
         elif locatorobject.strategy == 'xpath':
@@ -134,11 +125,10 @@ class Common(Logs):
         elif locatorobject.strategy == 'visible_text':
             return self.driver.find_element_by_visible_text(locatorobject.name)
 
-    def get_screenshot(self,file_name):
-        allure.attach(self.driver.get_screenshot_as_png(),name = file_name, attachment_type=AttachmentType.PNG)
+    def get_screenshot(self, file_name):
+        allure.attach(self.driver.get_screenshot_as_png(), name=file_name, attachment_type=AttachmentType.PNG)
 
-
-    def verify_element_present(self,locatorobject):
+    def verify_element_present(self, locatorobject):
         _element = self.get_element(locatorobject)
         if _element:
             self.log.info("Verifying the exact element text {}".format(locatorobject.name))
@@ -146,4 +136,6 @@ class Common(Logs):
             self.log.error('Element not found \n{}'.format(traceback.format_exc()))
             pytest.fail('Element not found \n{}'.format(traceback.format_exc()))
 
-
+    def actions(self, move1, move2):
+        action = ActionChains(self.driver)
+        action.move_to_element(self.get_element(locatorobject=move1)).move_to_element(self.get_element(locatorobject=move2)).click().perform()

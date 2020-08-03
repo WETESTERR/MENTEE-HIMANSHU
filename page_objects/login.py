@@ -1,6 +1,6 @@
 import time
 
-import allure
+
 import pytest
 import self
 from selenium.webdriver.common.by import By
@@ -18,9 +18,6 @@ class Login(Common):
     def __init__(self, driver):
         super().__init__(driver)
         self.driver = driver
-
-
-
 
     login_button = LocatorStrategy.locator_by_xpath("//a[@class='login']")
     email_field = LocatorStrategy.locator_by_id("email")
