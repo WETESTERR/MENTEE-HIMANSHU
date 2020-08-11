@@ -1,6 +1,7 @@
 import pytest
 
 import config
+from page_objects.common import Common
 from page_objects.login import Login
 
 from utilities.driver import Driver
@@ -43,8 +44,8 @@ def password(request):
     return request.config.getoption("--password")
 
 
-@pytest.fixture(scope='session')
-def setup(driver):
+@pytest.fixture(scope='session',autouse=True)
+def setup(driver,email,password):
     l = Login(driver)
     l.navigate_to_login_page()
     l.login_verify(email,password)

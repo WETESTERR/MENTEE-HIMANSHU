@@ -32,16 +32,13 @@ class Search_Item(Common):
     def add_item(self):
         self.actions(move1=Search_Item.product,move2=Search_Item.add_to_cart)
 
-
     def proceed_to_checkout(self):
         self.time_sleep(sleep_time)
         self.click(Search_Item.checkout_button)
 
-
     def shopping_cart_checkout(self):
         self.time_sleep(sleep_time)
         self.click(Search_Item.shopping_cart_checkout_button)
-
 
     def address_page_checkout(self):
         self.click(Search_Item.address_page_checkout_button)
