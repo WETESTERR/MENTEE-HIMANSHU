@@ -14,7 +14,6 @@ class TestSearchItem:
 
     @allure.story('Search Item and Add Item')
     def test_searchbar(self,driver):
-        l = Login(driver)
         c = Common(driver)
         s = Search_Item(driver)
         c.driver_wait(wait_time)

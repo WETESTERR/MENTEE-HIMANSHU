@@ -10,6 +10,7 @@ from utilities.log import Logs
 class TestLogin(Logs):
 
     @allure.story('Verify Login and Username')
+    @pytest.mark.skip("Skiiping the Login test.")
     def test_login(self,driver,email,password):
         log = self.logger()
 

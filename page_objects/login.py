@@ -25,6 +25,7 @@ class Login(Common):
     submit_button = LocatorStrategy.locator_by_name("SubmitLogin")
     logout_button = LocatorStrategy.locator_by_css_selector("a[class='logout']")
 
+
     def navigate_to_login_page(self):
         self.click(Login.login_button)
         self.get_screenshot(file_name="Login_page")
