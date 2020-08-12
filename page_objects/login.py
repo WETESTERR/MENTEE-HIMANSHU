@@ -2,7 +2,6 @@ import time
 
 
 import pytest
-import self
 from selenium.webdriver.common.by import By
 
 from config import sleep_time, wait_time

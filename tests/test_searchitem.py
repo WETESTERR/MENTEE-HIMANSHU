@@ -14,7 +14,6 @@ from utilities import driver
 class TestSearchItem:
 
     @allure.story('Search Item and Add Item')
-    @pytest.mark.flaky(reruns = 2)
     def test_searchbar(self,driver):
         c = Common(driver)
         s = Search_Item(driver)
