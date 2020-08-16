@@ -1,8 +1,7 @@
 import time
 
-import allure
+
 import pytest
-import self
 from selenium.webdriver.common.by import By
 
 from config import sleep_time, wait_time
@@ -19,14 +18,12 @@ class Login(Common):
         super().__init__(driver)
         self.driver = driver
 
-
-
-
     login_button = LocatorStrategy.locator_by_xpath("//a[@class='login']")
     email_field = LocatorStrategy.locator_by_id("email")
     password_field = LocatorStrategy.locator_by_id("passwd")
     submit_button = LocatorStrategy.locator_by_name("SubmitLogin")
     logout_button = LocatorStrategy.locator_by_css_selector("a[class='logout']")
+
 
     def navigate_to_login_page(self):
         self.click(Login.login_button)
