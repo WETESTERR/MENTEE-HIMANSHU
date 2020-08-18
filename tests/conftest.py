@@ -24,15 +24,21 @@ def browser_name(request):
 
 
 @pytest.fixture(scope='session')
-def driver(browser_name):
+def driver(browser_name,request):
     _driver = d.get_driver(browser_name)
     d.launch_url(config.url, _driver)
+
+    def teardown():
+        l = Login(_driver)
+        l.logout()
+        d.quit_driver(_driver)
+
+    request.add_finalizer(teardown)
+
     return _driver
 
 
-# def teardown():
-#    d.quit_driver(_driver)
-# request.add_finalizer(teardown)
+
 
 @pytest.fixture(scope='session', autouse=True)
 def email(request):

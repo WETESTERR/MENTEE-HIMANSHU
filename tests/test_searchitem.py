@@ -14,6 +14,8 @@ from utilities import driver
 class TestSearchItem:
 
     @allure.story('Search Item and Add Item')
+    @pytest.mark.smoke
+    @pytest.mark.searchbar
     def test_searchbar(self,driver):
         c = Common(driver)
         s = Search_Item(driver)
