@@ -24,6 +24,8 @@ class Search_Item(Common):
     checkout_button = LocatorStrategy.locator_by_xpath("//*[@id='layer_cart']/div[1]/div[2]/div[4]/a")
     shopping_cart_checkout_button = LocatorStrategy.locator_by_xpath("//*[@id='center_column']/p[2]/a[1]/span")
     address_page_checkout_button = LocatorStrategy.locator_by_xpath("//*[@class='columns-container']/div/div[3]/div/form/p/button/span")
+    shipping_page_terms = LocatorStrategy.locator_by_id("cgv")
+    shipping_page_checkout_button = LocatorStrategy.locator_by_xpath("//*[@class='columns-container']/div/div[3]/div/div/form/p/button/span")
 
     def item_search(self):
         self.enter_text(Search_Item.search_field, text=self.data['item'])
@@ -43,5 +45,8 @@ class Search_Item(Common):
     def address_page_checkout(self):
         self.click(Search_Item.address_page_checkout_button)
 
+    def shipping_page_checkout(self):
+        self.click(Search_Item.shipping_page_terms)
+        self.click(Search_Item.shipping_page_checkout_button)
 
 
