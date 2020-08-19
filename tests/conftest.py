@@ -28,12 +28,12 @@ def driver(browser_name,request):
     _driver = d.get_driver(browser_name)
     d.launch_url(config.url, _driver)
 
-    def teardown():
+    '''def teardown():
         l = Login(_driver)
         l.logout()
         d.quit_driver(_driver)
 
-    request.add_finalizer(teardown)
+    request.add_finalizer(teardown)'''
 
     return _driver
 
