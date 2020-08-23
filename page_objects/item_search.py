@@ -1,6 +1,7 @@
 import json
 import os
 
+import config
 from page_objects.common import Common
 from utilities import driver
 from utilities.data_factory import DataRead
@@ -26,27 +27,46 @@ class Search_Item(Common):
     address_page_checkout_button = LocatorStrategy.locator_by_xpath("//*[@class='columns-container']/div/div[3]/div/form/p/button/span")
     shipping_page_terms = LocatorStrategy.locator_by_id("cgv")
     shipping_page_checkout_button = LocatorStrategy.locator_by_xpath("//*[@class='columns-container']/div/div[3]/div/div/form/p/button/span")
+    payment_page_button = LocatorStrategy.locator_by_xpath("//*[@class='bankwire']")
+    confirm_button = LocatorStrategy.locator_by_css_selector("#cart_navigation > button")
+    complete_status = LocatorStrategy.locator_by_xpath("//*[@class='box']/p")
 
     def item_search(self):
         self.enter_text(Search_Item.search_field, text=self.data['item'])
         self.click(Search_Item.search_button)
 
+
     def add_item(self):
         self.actions(move1=Search_Item.product,move2=Search_Item.add_to_cart)
 
+
     def proceed_to_checkout(self):
-        self.time_sleep(sleep_time)
+        self.time_sleep(config.sleep_time)
         self.click(Search_Item.checkout_button)
 
+
     def shopping_cart_checkout(self):
-        self.time_sleep(sleep_time)
+        self.driver_wait(config.wait_time)
         self.click(Search_Item.shopping_cart_checkout_button)
 
+
     def address_page_checkout(self):
+        self.time_sleep(config.sleep_time)
         self.click(Search_Item.address_page_checkout_button)
 
+
     def shipping_page_checkout(self):
+        self.driver_wait(config.wait_time)
         self.click(Search_Item.shipping_page_terms)
         self.click(Search_Item.shipping_page_checkout_button)
+
+
+    def confirm_order(self):
+        self.click(Search_Item.payment_page_button)
+        self.click(Search_Item.confirm_button)
+
+
+    def order_status(self):
+        self.verify_text_present(Search_Item.complete_status,validatetext = 'complete')
 
 

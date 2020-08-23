@@ -1,0 +1,30 @@
+2020-08-22 21:02:37,385 :INFO :utilities.log :Clicked on the element //*[@class='logo img-responsive']
+2020-08-22 21:02:37,387 :INFO :utilities.log :Webdriver wait 10
+2020-08-22 21:02:37,820 :INFO :utilities.log :Entered text element search_query_top
+2020-08-22 21:02:39,159 :INFO :utilities.log :Clicked on the element //button[@name='submit_search']
+2020-08-22 21:02:45,621 :INFO :utilities.log :Sleep time 5
+2020-08-22 21:02:47,135 :INFO :utilities.log :Clicked on the element //*[@id='layer_cart']/div[1]/div[2]/div[4]/a
+2020-08-22 21:02:47,136 :INFO :utilities.log :Webdriver wait 10
+2020-08-22 21:02:48,955 :INFO :utilities.log :Clicked on the element //*[@id='center_column']/p[2]/a[1]/span
+2020-08-22 21:02:53,958 :INFO :utilities.log :Sleep time 5
+2020-08-22 21:02:55,290 :INFO :utilities.log :Clicked on the element //*[@class='columns-container']/div/div[3]/div/form/p/button/span
+2020-08-22 21:02:55,292 :INFO :utilities.log :Webdriver wait 10
+2020-08-22 21:02:55,529 :INFO :utilities.log :Clicked on the element cgv
+2020-08-22 21:02:56,961 :INFO :utilities.log :Clicked on the element //*[@class='columns-container']/div/div[3]/div/div/form/p/button/span
+2020-08-22 21:02:58,620 :INFO :utilities.log :Clicked on the element //*[@class='bankwire']
+2020-08-22 21:03:00,810 :INFO :utilities.log :Clicked on the element #cart_navigation > button
+2020-08-22 21:03:00,938 :INFO :utilities.log :Verifying the presence of text //*[@class='box']/p
+ 5
+2020-08-22 21:02:55,290 :INFO :utilities.log :Clicked on the element //*[@class='columns-container']/div/div[3]/div/form/p/button/span
+2020-08-22 21:02:55,292 :INFO :utilities.log :Webdriver wait 10
+2020-08-22 21:02:55,529 :INFO :utilities.log :Clicked on the element cgv
+2020-08-22 21:02:56,961 :INFO :utilities.log :Clicked on the element //*[@class='columns-container']/div/div[3]/div/div/form/p/button/span
+2020-08-22 21:02:58,620 :INFO :utilities.log :Clicked on the element //*[@class='bankwire']
+2020-08-22 21:03:00,810 :INFO :utilities.log :Clicked on the element #cart_navigation > button
+2020-08-22 21:03:00,938 :INFO :utilities.log :Verifying the presence of text //*[@class='box']/p
+2 :INFO :utilities.log :Webdriver wait 10
+2020-08-22 21:02:55,529 :INFO :utilities.log :Clicked on the element cgv
+2020-08-22 21:02:56,961 :INFO :utilities.log :Clicked on the element //*[@class='columns-container']/div/div[3]/div/div/form/p/button/span
+2020-08-22 21:02:58,620 :INFO :utilities.log :Clicked on the element //*[@class='bankwire']
+2020-08-22 21:03:00,810 :INFO :utilities.log :Clicked on the element #cart_navigation > button
+2020-08-22 21:03:00,938 :INFO :utilities.log :Verifying the presence of text //*[@class='box']/p
