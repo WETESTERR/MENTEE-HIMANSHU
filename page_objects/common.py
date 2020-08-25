@@ -39,10 +39,10 @@ class Common(Logs):
             pytest.fail('Element not found \n{}'.format(traceback.format_exc()))
 
 
-    def clear(self,locatorobject):
+    def clear_text(self, locatorobject):
         _element = self.get_element(locatorobject)
         if _element:
-            _element.clear()
+            _element.clear_text()
             self.log.info("Clear the element {}".format(locatorobject.name))
         else:
             self.log.error('Element not found \n{}'.format(traceback.format_exc()))
@@ -84,7 +84,7 @@ class Common(Logs):
         if _element:
             gettext = _element.text
             assert validatetext in gettext
-            '{} did not match with expected {}'.format(validatetext, gettext)
+            '{} not in {}'.format(validatetext, gettext)
             self.log.info("Verifying the presence of text {}".format(locatorobject.name))
         else:
             self.log.error('Element not found \n{}'.format(traceback.format_stack()))

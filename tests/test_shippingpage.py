@@ -4,16 +4,15 @@ import pytest
 from config import wait_time
 from page_objects.common import Common
 from page_objects.home_page import HomePage
-from page_objects.item_search import Search_Item
+from page_objects.item_search import SearchItem
 
 @allure.feature('Item Ship')
-class TestShipping:
+class TestShippingConfirmation:
 
     @allure.story("Clicking the Terms of Service and Proceed to checkout")
-    #@pytest.mark.skip("Skip")
     def test_shipping_page(self,driver):
         c = Common(driver)
-        s = Search_Item(driver)
+        s = SearchItem(driver)
         h = HomePage(driver)
         h.navigate_to_homepage()
         c.driver_wait(wait_time)
