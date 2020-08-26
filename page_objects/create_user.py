@@ -14,7 +14,7 @@ class CreateUser(Common):
     login_button = LocatorStrategy.locator_by_class_name('login')
     email_field = LocatorStrategy.locator_by_id("email_create")
     submit_button = LocatorStrategy.locator_by_id("SubmitCreate")
-    gender = LocatorStrategy.locator_by_id("id_gender1'")
+    gender = LocatorStrategy.locator_by_id("id_gender1")
     first_name = LocatorStrategy.locator_by_id("customer_firstname")
     last_name = LocatorStrategy.locator_by_name("customer_lastname")
     password_field = LocatorStrategy.locator_by_name("passwd")
@@ -28,7 +28,7 @@ class CreateUser(Common):
     address_state = LocatorStrategy.locator_by_id("id_state")
     address_postcode = LocatorStrategy.locator_by_id("postcode")
     address_country = LocatorStrategy.locator_by_id("id_country")
-    phone_num = LocatorStrategy.locator_by_xpath("phone_mobile")
+    phone_num = LocatorStrategy.locator_by_name("phone_mobile")
     alias = LocatorStrategy.locator_by_id("alias")
     submit = LocatorStrategy.locator_by_id("submitAccount")
 
@@ -38,12 +38,12 @@ class CreateUser(Common):
 
 
     def enter_email(self,email):
-        self.enter_text(CreateUser.email_field,text=email)
+        self.enter_text(CreateUser.email_field,text=self.data['new_email'])
         self.click(CreateUser.submit_button)
 
 
     def title_info(self,password):
-        self.driver_wait(config.wait_time)
+        self.time_sleep(config.sleep_time)
         self.click(CreateUser.gender)
         self.enter_text(CreateUser.first_name, text=self.data['firstname'])
         self.enter_text(CreateUser.last_name, text=self.data['lastname'])
@@ -51,12 +51,12 @@ class CreateUser(Common):
 
 
     def date_of_birth(self):
-        date = self.select_option_from_drop_down(CreateUser.date_dob)
-        date.select_by_index(7)
-        month = self.select_option_from_drop_down(CreateUser.month_dob)
-        month.month.select_by_index(9)
-        year = self.select_option_from_drop_down(CreateUser.year_dob)
-        year.year.select_by_value('1988')
+        select = self.select_option_from_drop_down(CreateUser.date_dob)
+        select.select_by_index(7)
+        select = self.select_option_from_drop_down(CreateUser.month_dob)
+        select.select_by_index(9)
+        select = self.select_option_from_drop_down(CreateUser.year_dob)
+        select.select_by_value('1988')
 
 
     def address(self):
@@ -65,12 +65,12 @@ class CreateUser(Common):
         self.clear_text(CreateUser.address_lastname)
         self.enter_text(CreateUser.address_lastname, text = self.data['lastname'])
         self.enter_text(CreateUser.address_number, text = self.data['house_number'])
-        self.enter_text(CreateUser.address_city, text = self.data['Fairfax'])
-        state = self.select_option_from_drop_down(CreateUser.address_state)
-        state.select_by_visible_text("Virginia")
+        self.enter_text(CreateUser.address_city, text = self.data['city'])
+        select = self.select_option_from_drop_down(CreateUser.address_state)
+        select.select_by_visible_text("Virginia")
         self.enter_text(CreateUser.address_postcode, text=self.data['postcode'])
-        country = self.select_option_from_drop_down(CreateUser.address_country)
-        country.select_by_visible_text("United States")
+        select = self.select_option_from_drop_down(CreateUser.address_country)
+        select.select_by_visible_text("United States")
 
 
     def misc_info(self):

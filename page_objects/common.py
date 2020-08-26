@@ -42,7 +42,7 @@ class Common(Logs):
     def clear_text(self, locatorobject):
         _element = self.get_element(locatorobject)
         if _element:
-            _element.clear_text()
+            _element.clear()
             self.log.info("Clear the element {}".format(locatorobject.name))
         else:
             self.log.error('Element not found \n{}'.format(traceback.format_exc()))
@@ -69,11 +69,14 @@ class Common(Logs):
     def select_option_from_drop_down(self, locatorobject):
         _element = self.get_element(locatorobject)
         if _element:
-            Select(_element)
+            select = Select(_element)
             self.log.info("Drop down element {}".format(locatorobject.name))
+            return select
         else:
             self.log.error('Element not found \n{}'.format(traceback.extract_stack()))
             pytest.fail('Element not found \n{}'.format(traceback.extract_stack()))
+
+
 
     def switch_window(self, text):
         self.log.info("Window switch {}".format(self.driver.switch_to_window(text)))
