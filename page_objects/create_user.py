@@ -10,6 +10,7 @@ class CreateUser(Common):
         super().__init__(driver)
         self.driver = driver
         self.data = DataRead.json_read('data.json')
+        self.log = self.logger()
 
     login_button = LocatorStrategy.locator_by_class_name('login')
     email_field = LocatorStrategy.locator_by_id("email_create")
@@ -37,12 +38,13 @@ class CreateUser(Common):
         self.click(CreateUser.login_button)
 
 
-    def enter_email(self,email):
+    def enter_email(self):
         self.enter_text(CreateUser.email_field,text=self.data['new_email'])
         self.click(CreateUser.submit_button)
+        self.log.info("Entered email is".format(self.data['new_email']))
 
 
-    def title_info(self,password):
+    def fill_title_info(self, password):
         self.time_sleep(config.sleep_time)
         self.click(CreateUser.gender)
         self.enter_text(CreateUser.first_name, text=self.data['firstname'])
@@ -50,7 +52,7 @@ class CreateUser(Common):
         self.enter_text(CreateUser.password_field, text=password)
 
 
-    def date_of_birth(self):
+    def fill_date_of_birth(self):
         select = self.select_option_from_drop_down(CreateUser.date_dob)
         select.select_by_index(7)
         select = self.select_option_from_drop_down(CreateUser.month_dob)
@@ -59,7 +61,7 @@ class CreateUser(Common):
         select.select_by_value('1988')
 
 
-    def address(self):
+    def fill_address_details(self):
         self.clear_text(CreateUser.address_firstname)
         self.enter_text(CreateUser.address_firstname, text=self.data['firstname'])
         self.clear_text(CreateUser.address_lastname)
