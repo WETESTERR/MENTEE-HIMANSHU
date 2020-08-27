@@ -37,6 +37,7 @@ class SearchItem(Common):
 
 
     def add_item(self):
+        self.driver_wait(config.wait_time)
         self.actions(move1=SearchItem.product, move2=SearchItem.add_to_cart)
 
 

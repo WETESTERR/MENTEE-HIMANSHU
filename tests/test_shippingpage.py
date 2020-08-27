@@ -12,7 +12,10 @@ from page_objects.login import Login
 class TestShippingConfirmation:
 
     @allure.story("Clicking the Terms of Service and Proceed to checkout")
-    @pytest.mark.skip("Skip for now")
+    @pytest.mark.smoke
+    @pytest.mark.searchbar
+    #@pytest.mark.skip("Skip for now")
+    @pytest.mark.second
     def test_shipping_page(self,driver):
         c = Common(driver)
         s = SearchItem(driver)
@@ -28,4 +31,4 @@ class TestShippingConfirmation:
         s.shipping_page_checkout()
         s.confirm_order()
         s.order_status()
-        #l.logout()
+
