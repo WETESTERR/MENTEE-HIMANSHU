@@ -3,10 +3,11 @@ import pytest
 
 from page_objects.create_user import CreateUser
 from page_objects.login import Login
+from utilities.log import Logs
 
 
 @allure.feature("Create User")
-class TestCreateUser:
+class TestCreateUser(Logs):
 
     @allure.story("Enter user details")
     #@pytest.mark.skip("Skip for now")
@@ -14,6 +15,8 @@ class TestCreateUser:
     def test_createuser(self,driver,password):
         c = CreateUser(driver)
         l = Login(driver)
+        log = self.logger()
+        #log.info(c)
         l.logout()
         c.login_click()
         c.enter_email()

@@ -1,73 +1,40 @@
-2020-08-26 20:55:15,983 :INFO :utilities.log :Clicked on the element a[class='logout']
-2020-08-26 20:55:17,827 :INFO :utilities.log :Clicked on the element login
-2020-08-26 20:55:18,347 :INFO :utilities.log :Entered text element email_create
-2020-08-26 20:55:18,633 :INFO :utilities.log :Clicked on the element SubmitCreate
-2020-08-26 20:55:18,639 :INFO :utilities.log :Entered email is
-2020-08-26 20:55:23,643 :INFO :utilities.log :Sleep time 5
-2020-08-26 20:55:23,904 :INFO :utilities.log :Clicked on the element id_gender1
-2020-08-26 20:55:24,297 :INFO :utilities.log :Entered text element customer_firstname
-2020-08-26 20:55:24,637 :INFO :utilities.log :Entered text element customer_lastname
-2020-08-26 20:55:25,063 :INFO :utilities.log :Entered text element passwd
-2020-08-26 20:55:25,069 :INFO :utilities.log :Entered First Name is
-2020-08-26 20:55:25,073 :INFO :utilities.log :Entered Last Name is
-2020-08-26 20:55:25,184 :INFO :utilities.log :Drop down element days
-2020-08-26 20:55:25,954 :INFO :utilities.log :Drop down element #months
-2020-08-26 20:55:26,707 :INFO :utilities.log :Drop down element #years
-2020-08-26 20:55:27,475 :INFO :utilities.log :Selected Birth date is
-2020-08-26 20:55:27,898 :INFO :utilities.log :Selected Birth Month is
-2020-08-26 20:55:28,096 :INFO :utilities.log :Selected Birth Year is
-2020-08-26 20:55:28,334 :INFO :utilities.log :Clear the element firstname
-2020-08-26 20:55:28,733 :INFO :utilities.log :Entered text element firstname
-2020-08-26 20:55:28,992 :INFO :utilities.log :Clear the element lastname
-2020-08-26 20:55:29,232 :INFO :utilities.log :Entered text element lastname
-2020-08-26 20:55:29,427 :INFO :utilities.log :Entered text element #address1
-2020-08-26 20:55:29,657 :INFO :utilities.log :Entered text element city
-2020-08-26 20:55:29,734 :INFO :utilities.log :Drop down element id_state
-2020-08-26 20:55:30,089 :INFO :utilities.log :Entered text element postcode
-2020-08-26 20:55:30,163 :INFO :utilities.log :Drop down element id_country
-2020-08-26 20:55:30,209 :INFO :utilities.log :Entered City is
-2020-08-26 20:55:30,211 :INFO :utilities.log :Entered Postal Code is
-2020-08-26 20:55:30,420 :INFO :utilities.log :Entered text element phone_mobile
-2020-08-26 20:55:30,630 :INFO :utilities.log :Entered text element alias
-2020-08-26 20:55:32,952 :INFO :utilities.log :Clicked on the element submitAccount
-2020-08-26 20:55:32,957 :INFO :utilities.log :Entered Phone Number is
-5,184 :INFO :utilities.log :Drop down element days
-2020-08-26 20:55:25,954 :INFO :utilities.log :Drop down element #months
-2020-08-26 20:55:26,707 :INFO :utilities.log :Drop down element #years
-2020-08-26 20:55:27,475 :INFO :utilities.log :Selected Birth date is
-2020-08-26 20:55:27,898 :INFO :utilities.log :Selected Birth Month is
-2020-08-26 20:55:28,096 :INFO :utilities.log :Selected Birth Year is
-2020-08-26 20:55:28,334 :INFO :utilities.log :Clear the element firstname
-2020-08-26 20:55:28,733 :INFO :utilities.log :Entered text element firstname
-2020-08-26 20:55:28,992 :INFO :utilities.log :Clear the element lastname
-2020-08-26 20:55:29,232 :INFO :utilities.log :Entered text element lastname
-2020-08-26 20:55:29,427 :INFO :utilities.log :Entered text element #address1
-2020-08-26 20:55:29,657 :INFO :utilities.log :Entered text element city
-2020-08-26 20:55:29,734 :INFO :utilities.log :Drop down element id_state
-2020-08-26 20:55:30,089 :INFO :utilities.log :Entered text element postcode
-2020-08-26 20:55:30,163 :INFO :utilities.log :Drop down element id_country
-2020-08-26 20:55:30,209 :INFO :utilities.log :Entered City is
-2020-08-26 20:55:30,211 :INFO :utilities.log :Entered Postal Code is
-2020-08-26 20:55:30,420 :INFO :utilities.log :Entered text element phone_mobile
-2020-08-26 20:55:30,630 :INFO :utilities.log :Entered text element alias
-2020-08-26 20:55:32,952 :INFO :utilities.log :Clicked on the element submitAccount
-2020-08-26 20:55:32,957 :INFO :utilities.log :Entered Phone Number is
-red text element #address1
-2020-08-26 20:55:29,657 :INFO :utilities.log :Entered text element city
-2020-08-26 20:55:29,734 :INFO :utilities.log :Drop down element id_state
-2020-08-26 20:55:30,089 :INFO :utilities.log :Entered text element postcode
-2020-08-26 20:55:30,163 :INFO :utilities.log :Drop down element id_country
-2020-08-26 20:55:30,209 :INFO :utilities.log :Entered City is
-2020-08-26 20:55:30,211 :INFO :utilities.log :Entered Postal Code is
-2020-08-26 20:55:30,420 :INFO :utilities.log :Entered text element phone_mobile
-2020-08-26 20:55:30,630 :INFO :utilities.log :Entered text element alias
-2020-08-26 20:55:32,952 :INFO :utilities.log :Clicked on the element submitAccount
-2020-08-26 20:55:32,957 :INFO :utilities.log :Entered Phone Number is
-d text element postcode
-2020-08-26 20:55:30,163 :INFO :utilities.log :Drop down element id_country
-2020-08-26 20:55:30,209 :INFO :utilities.log :Entered City is
-2020-08-26 20:55:30,211 :INFO :utilities.log :Entered Postal Code is
-2020-08-26 20:55:30,420 :INFO :utilities.log :Entered text element phone_mobile
-2020-08-26 20:55:30,630 :INFO :utilities.log :Entered text element alias
-2020-08-26 20:55:32,952 :INFO :utilities.log :Clicked on the element submitAccount
-2020-08-26 20:55:32,957 :INFO :utilities.log :Entered Phone Number is
+2020-08-27 20:27:06,958 :INFO :utilities.log :Clicked on the element a[class='logout']
+2020-08-27 20:27:08,044 :INFO :utilities.log :Clicked on the element login
+2020-08-27 20:27:08,299 :INFO :utilities.log :Entered text element email_create
+2020-08-27 20:27:08,437 :INFO :utilities.log :Clicked on the element SubmitCreate
+2020-08-27 20:27:08,438 :INFO :utilities.log :Entered email is himans001234567000@gmail.com
+2020-08-27 20:27:13,439 :INFO :utilities.log :Sleep time 5
+2020-08-27 20:27:13,983 :INFO :utilities.log :Clicked on the element id_gender1
+2020-08-27 20:27:14,671 :INFO :utilities.log :Entered text element customer_firstname
+2020-08-27 20:27:15,017 :INFO :utilities.log :Entered text element customer_lastname
+2020-08-27 20:27:15,390 :INFO :utilities.log :Entered text element passwd
+2020-08-27 20:27:15,392 :INFO :utilities.log :Entered First Name is Himanshu
+2020-08-27 20:27:15,393 :INFO :utilities.log :Entered Last Name is Sethi
+2020-08-27 20:27:15,474 :INFO :utilities.log :Drop down element days
+2020-08-27 20:27:15,957 :INFO :utilities.log :Drop down element #months
+2020-08-27 20:27:16,429 :INFO :utilities.log :Drop down element #years
+2020-08-27 20:27:17,013 :INFO :utilities.log :Selected Birth date is None
+2020-08-27 20:27:17,298 :INFO :utilities.log :Selected Birth Month is None
+2020-08-27 20:27:17,403 :INFO :utilities.log :Selected Birth Year is None
+2020-08-27 20:27:17,589 :INFO :utilities.log :Clear the element firstname
+2020-08-27 20:27:17,846 :INFO :utilities.log :Entered text element firstname
+2020-08-27 20:27:18,021 :INFO :utilities.log :Clear the element lastname
+2020-08-27 20:27:18,169 :INFO :utilities.log :Entered text element lastname
+2020-08-27 20:27:18,348 :INFO :utilities.log :Entered text element #address1
+2020-08-27 20:27:18,529 :INFO :utilities.log :Entered text element city
+2020-08-27 20:27:18,586 :INFO :utilities.log :Drop down element id_state
+2020-08-27 20:27:18,979 :INFO :utilities.log :Entered text element postcode
+2020-08-27 20:27:19,068 :INFO :utilities.log :Drop down element id_country
+2020-08-27 20:27:19,119 :INFO :utilities.log :Entered City is Fairfax
+2020-08-27 20:27:19,120 :INFO :utilities.log :Entered Postal Code is 22030
+2020-08-27 20:27:19,351 :INFO :utilities.log :Entered text element phone_mobile
+2020-08-27 20:27:20,043 :INFO :utilities.log :Entered text element alias
+2020-08-27 20:27:22,564 :INFO :utilities.log :Clicked on the element submitAccount
+2020-08-27 20:27:22,566 :INFO :utilities.log :Entered Phone Number is 1234567890
+2020-08-27 20:27:19,068 :INFO :utilities.log :Drop down element id_country
+2020-08-27 20:27:19,119 :INFO :utilities.log :Entered City is Fairfax
+2020-08-27 20:27:19,120 :INFO :utilities.log :Entered Postal Code is 22030
+2020-08-27 20:27:19,351 :INFO :utilities.log :Entered text element phone_mobile
+2020-08-27 20:27:20,043 :INFO :utilities.log :Entered text element alias
+2020-08-27 20:27:22,564 :INFO :utilities.log :Clicked on the element submitAccount
+2020-08-27 20:27:22,566 :INFO :utilities.log :Entered Phone Number is 1234567890

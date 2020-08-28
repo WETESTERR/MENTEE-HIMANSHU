@@ -41,7 +41,7 @@ class CreateUser(Common):
     def enter_email(self):
         self.enter_text(CreateUser.email_field,text=self.data['new_email'])
         self.click(CreateUser.submit_button)
-        self.log.info("Entered email is".format(self.data['new_email']))
+        self.log.info("Entered email is {}".format(self.data['new_email']))
 
 
     def fill_title_info(self, password):
@@ -50,8 +50,8 @@ class CreateUser(Common):
         self.enter_text(CreateUser.first_name, text=self.data['firstname'])
         self.enter_text(CreateUser.last_name, text=self.data['lastname'])
         self.enter_text(CreateUser.password_field, text=password)
-        self.log.info("Entered First Name is".format(self.data['firstname']))
-        self.log.info("Entered Last Name is".format(self.data['lastname']))
+        self.log.info("Entered First Name is {}".format(self.data['firstname']))
+        self.log.info("Entered Last Name is {}".format(self.data['lastname']))
 
 
 
@@ -62,9 +62,9 @@ class CreateUser(Common):
         select.select_by_index(9)
         select = self.select_option_from_drop_down(CreateUser.year_dob)
         select.select_by_value('1988')
-        self.log.info("Selected Birth date is".format(select.select_by_index(7)))
-        self.log.info("Selected Birth Month is".format(select.select_by_index(9)))
-        self.log.info("Selected Birth Year is".format(select.select_by_value('1988')))
+        self.log.info("Selected Birth date is {}".format(select.select_by_index(7)))
+        self.log.info("Selected Birth Month is {}".format(select.select_by_index(9)))
+        self.log.info("Selected Birth Year is {}".format(select.select_by_value('1988')))
 
 
     def fill_address_details(self):
@@ -79,8 +79,8 @@ class CreateUser(Common):
         self.enter_text(CreateUser.address_postcode, text=self.data['postcode'])
         select = self.select_option_from_drop_down(CreateUser.address_country)
         select.select_by_visible_text("United States")
-        self.log.info("Entered City is".format(self.data['city']))
-        self.log.info("Entered Postal Code is".format(self.data['postcode']))
+        self.log.info("Entered City is {}".format(self.data['city']))
+        self.log.info("Entered Postal Code is {}".format(self.data['postcode']))
 
 
 
@@ -88,7 +88,7 @@ class CreateUser(Common):
         self.enter_text(CreateUser.phone_num, text = self.data['phone_number'])
         self.enter_text(CreateUser.alias, text=self.data['alias_text'])
         self.click(CreateUser.submit)
-        self.log.info("Entered Phone Number is".format(self.data['phone_number']))
+        self.log.info("Entered Phone Number is {}".format(self.data['phone_number']))
 
 
 
