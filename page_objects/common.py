@@ -38,6 +38,17 @@ class Common(Logs):
             self.log.error('Element not found \n{}'.format(traceback.format_exc()))
             pytest.fail('Element not found \n{}'.format(traceback.format_exc()))
 
+
+    def clear_text(self, locatorobject):
+        _element = self.get_element(locatorobject)
+        if _element:
+            _element.clear()
+            self.log.info("Clear the element {}".format(locatorobject.name))
+        else:
+            self.log.error('Element not found \n{}'.format(traceback.format_exc()))
+            pytest.fail('Element not found \n{}'.format(traceback.format_exc()))
+
+
     def enter_text(self, locatorobject, text):
         _element = self.get_element(locatorobject)
         if _element:
@@ -58,35 +69,40 @@ class Common(Logs):
     def select_option_from_drop_down(self, locatorobject):
         _element = self.get_element(locatorobject)
         if _element:
-            Select(_element)
+            select = Select(_element)
             self.log.info("Drop down element {}".format(locatorobject.name))
+            return select
         else:
             self.log.error('Element not found \n{}'.format(traceback.extract_stack()))
             pytest.fail('Element not found \n{}'.format(traceback.extract_stack()))
+
+
 
     def switch_window(self, text):
         self.log.info("Window switch {}".format(self.driver.switch_to_window(text)))
         self.driver.switch_to_default_content()
 
-    def verify_text_present(self, validatetext, locatorobject):
+    def verify_text_present(self, locatorobject,validatetext):
         _element = self.get_element(locatorobject)
         if _element:
             gettext = _element.text
             assert validatetext in gettext
+            '{} not in {}'.format(validatetext, gettext)
             self.log.info("Verifying the presence of text {}".format(locatorobject.name))
         else:
             self.log.error('Element not found \n{}'.format(traceback.format_stack()))
-            pytest.fail('Element not found \n{}'.format(traceback.format_exc()))
 
-    def verify_exact_text(self, validatetext, locatorobject):
+
+    def verify_exact_text(self, locatorobject, validatetext):
         _element = self.get_element(locatorobject)
         if _element:
             gettext = _element.text
             assert validatetext == gettext
+            '{} did not match with expected {}'.format(validatetext,gettext)
             self.log.info("Verifying the exact text {}".format(locatorobject.name))
         else:
             self.log.error('Element not found \n{}'.format(traceback.format_exc()))
-            pytest.fail('Element not found \n{}'.format(traceback.format_exc()))
+
 
     def drag_drop(self, source, target):
         source_element = self.driver.find_element_by_name(source)
