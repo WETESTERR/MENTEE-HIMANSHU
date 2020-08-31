@@ -11,7 +11,7 @@ class TestLogin(Logs):
 
     @allure.story('Verify Login and Username')
     @pytest.mark.searchbar
-    @pytest.mark.skip("Skip Login")
+    #@pytest.mark.skip("Skip Login")
     def test_login(self,driver,email,password):
         log = self.logger()
 
