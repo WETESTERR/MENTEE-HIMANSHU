@@ -123,7 +123,7 @@ class Common(Logs):
         if locatorobject.strategy == 'id':
             return self.driver.find_element_by_id(locatorobject.name)
         elif locatorobject.strategy == 'xpath':
-            return self.driver.find_element_by_xpath(locatorobject.name)
+            return self.driver.find_element_by_xpath(locatorobject.name) or self.driver.find_elements_by_xpath(locatorobject.name)
         elif locatorobject.strategy == 'css_selector':
             return self.driver.find_element_by_css_selector(locatorobject.name)
         elif locatorobject.strategy == 'class_name':

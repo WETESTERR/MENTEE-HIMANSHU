@@ -14,7 +14,7 @@ class TestShippingConfirmation:
     @allure.story("Clicking the Terms of Service and Proceed to checkout")
     @pytest.mark.smoke
     @pytest.mark.searchbar
-    #@pytest.mark.skip("Skip for now")
+    @pytest.mark.skip("Skip for now")
     #@pytest.mark.second
     def test_shipping_page(self,driver):
         c = Common(driver)
