@@ -19,7 +19,7 @@ class SearchItem(Common):
     add_to_cart = LocatorStrategy.locator_by_xpath(
         "//div[@class='product-container']/div[2]/div[2]/a[@title='Add to cart']")
     checkout_button = LocatorStrategy.locator_by_xpath("//*[@id='layer_cart']/div[1]/div[2]/div[4]/a")
-    product_description = LocatorStrategy.locator_by_class_name("product-name")
+    product_description = LocatorStrategy.locator_by_xpath("//*[@id='order-detail-content']/table/tbody/tr/td/p/a")
     shopping_cart_checkout_button = LocatorStrategy.locator_by_xpath("//*[@id='center_column']/p[2]/a[1]/span")
     address_page_checkout_button = LocatorStrategy.locator_by_xpath(
         "//*[@class='columns-container']/div/div[3]/div/form/p/button/span")
@@ -35,7 +35,7 @@ class SearchItem(Common):
         self.click(SearchItem.search_button)
 
     def add_item(self):
-        self.driver_wait(config.wait_time)
+        self.time_sleep(config.sleep_time)
         self.actions(move1=SearchItem.product, move2=SearchItem.add_to_cart)
 
     def proceed_to_checkout(self):
@@ -43,9 +43,9 @@ class SearchItem(Common):
         self.click(SearchItem.checkout_button)
 
     def shopping_cart_checkout(self):
-        self.driver_wait(config.wait_time)
-        if self.verify_exact_text(SearchItem.product_description,self.data['dress_name']):
-            self.click(SearchItem.shopping_cart_checkout_button)
+        self.time_sleep(config.sleep_time)
+        self.verify_exact_text(SearchItem.product_description,validatetext=self.data['dress_name'])
+        self.click(SearchItem.shopping_cart_checkout_button)
 
     def address_page_checkout(self):
         self.time_sleep(config.sleep_time)
@@ -57,6 +57,8 @@ class SearchItem(Common):
         self.click(SearchItem.shipping_page_checkout_button)
 
     def confirm_order(self):
+        self.driver_wait(config.wait_time)
+        self.verify_exact_text(SearchItem.product_description,validatetext=self.data['dress_name'])
         self.click(SearchItem.payment_page_button)
         self.click(SearchItem.confirm_button)
 

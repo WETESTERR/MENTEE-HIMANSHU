@@ -1,15 +1,22 @@
-2020-09-02 20:18:04,435 :INFO :utilities.log :Clicked on the element //*[@class='logo img-responsive']
-2020-09-02 20:18:04,437 :INFO :utilities.log :Webdriver wait 10
-2020-09-02 20:18:04,731 :INFO :utilities.log :Entered text element search_query_top
-2020-09-02 20:18:05,778 :INFO :utilities.log :Clicked on the element //button[@name='submit_search']
-2020-09-02 20:18:05,780 :INFO :utilities.log :Webdriver wait 10
-2020-09-02 20:18:11,406 :INFO :utilities.log :Sleep time 5
-2020-09-02 20:18:12,926 :INFO :utilities.log :Clicked on the element //*[@id='layer_cart']/div[1]/div[2]/div[4]/a
-2020-09-02 20:18:12,927 :INFO :utilities.log :Webdriver wait 10
-:18:04,437 :INFO :utilities.log :Webdriver wait 10
-2020-09-02 20:18:04,731 :INFO :utilities.log :Entered text element search_query_top
-2020-09-02 20:18:05,778 :INFO :utilities.log :Clicked on the element //button[@name='submit_search']
-2020-09-02 20:18:05,780 :INFO :utilities.log :Webdriver wait 10
-2020-09-02 20:18:11,406 :INFO :utilities.log :Sleep time 5
-2020-09-02 20:18:12,926 :INFO :utilities.log :Clicked on the element //*[@id='layer_cart']/div[1]/div[2]/div[4]/a
-2020-09-02 20:18:12,927 :INFO :utilities.log :Webdriver wait 10
+2020-09-03 19:55:00,219 :INFO :utilities.log :Clicked on the element //*[@class='logo img-responsive']
+2020-09-03 19:55:00,220 :INFO :utilities.log :Webdriver wait 10
+2020-09-03 19:55:01,079 :INFO :utilities.log :Entered text element search_query_top
+2020-09-03 19:55:02,123 :INFO :utilities.log :Clicked on the element //button[@name='submit_search']
+2020-09-03 19:55:07,124 :INFO :utilities.log :Sleep time 5
+2020-09-03 19:55:12,878 :INFO :utilities.log :Sleep time 5
+2020-09-03 19:55:14,216 :INFO :utilities.log :Clicked on the element //*[@id='layer_cart']/div[1]/div[2]/div[4]/a
+2020-09-03 19:55:19,218 :INFO :utilities.log :Sleep time 5
+2020-09-03 19:55:19,322 :INFO :utilities.log :Verifying the exact text //*[@id='order-detail-content']/table/tbody/tr/td/p/a
+2020-09-03 19:55:20,743 :INFO :utilities.log :Clicked on the element //*[@id='center_column']/p[2]/a[1]/span
+2020-09-03 19:55:22,216 :INFO :utilities.log :Clicked on the element //*[@class='columns-container']/div/div[3]/div/form/p/button/span
+2020-09-03 19:55:22,219 :INFO :utilities.log :Webdriver wait 10
+2020-09-03 19:55:22,607 :INFO :utilities.log :Clicked on the element cgv
+2020-09-03 19:55:24,538 :INFO :utilities.log :Clicked on the element //*[@class='columns-container']/div/div[3]/div/div/form/p/button/span
+2020-09-03 19:55:24,540 :INFO :utilities.log :Webdriver wait 10
+2020-09-03 19:55:24,743 :INFO :utilities.log :Verifying the exact text //*[@id='order-detail-content']/table/tbody/tr/td/p/a
+lement //*[@class='columns-container']/div/div[3]/div/form/p/button/span
+2020-09-03 19:55:22,219 :INFO :utilities.log :Webdriver wait 10
+2020-09-03 19:55:22,607 :INFO :utilities.log :Clicked on the element cgv
+2020-09-03 19:55:24,538 :INFO :utilities.log :Clicked on the element //*[@class='columns-container']/div/div[3]/div/div/form/p/button/span
+2020-09-03 19:55:24,540 :INFO :utilities.log :Webdriver wait 10
+2020-09-03 19:55:24,743 :INFO :utilities.log :Verifying the exact text //*[@id='order-detail-content']/table/tbody/tr/td/p/a
