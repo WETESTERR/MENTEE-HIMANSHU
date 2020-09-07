@@ -1,22 +1,27 @@
-2020-09-03 19:55:00,219 :INFO :utilities.log :Clicked on the element //*[@class='logo img-responsive']
-2020-09-03 19:55:00,220 :INFO :utilities.log :Webdriver wait 10
-2020-09-03 19:55:01,079 :INFO :utilities.log :Entered text element search_query_top
-2020-09-03 19:55:02,123 :INFO :utilities.log :Clicked on the element //button[@name='submit_search']
-2020-09-03 19:55:07,124 :INFO :utilities.log :Sleep time 5
-2020-09-03 19:55:12,878 :INFO :utilities.log :Sleep time 5
-2020-09-03 19:55:14,216 :INFO :utilities.log :Clicked on the element //*[@id='layer_cart']/div[1]/div[2]/div[4]/a
-2020-09-03 19:55:19,218 :INFO :utilities.log :Sleep time 5
-2020-09-03 19:55:19,322 :INFO :utilities.log :Verifying the exact text //*[@id='order-detail-content']/table/tbody/tr/td/p/a
-2020-09-03 19:55:20,743 :INFO :utilities.log :Clicked on the element //*[@id='center_column']/p[2]/a[1]/span
-2020-09-03 19:55:22,216 :INFO :utilities.log :Clicked on the element //*[@class='columns-container']/div/div[3]/div/form/p/button/span
-2020-09-03 19:55:22,219 :INFO :utilities.log :Webdriver wait 10
-2020-09-03 19:55:22,607 :INFO :utilities.log :Clicked on the element cgv
-2020-09-03 19:55:24,538 :INFO :utilities.log :Clicked on the element //*[@class='columns-container']/div/div[3]/div/div/form/p/button/span
-2020-09-03 19:55:24,540 :INFO :utilities.log :Webdriver wait 10
-2020-09-03 19:55:24,743 :INFO :utilities.log :Verifying the exact text //*[@id='order-detail-content']/table/tbody/tr/td/p/a
-lement //*[@class='columns-container']/div/div[3]/div/form/p/button/span
-2020-09-03 19:55:22,219 :INFO :utilities.log :Webdriver wait 10
-2020-09-03 19:55:22,607 :INFO :utilities.log :Clicked on the element cgv
-2020-09-03 19:55:24,538 :INFO :utilities.log :Clicked on the element //*[@class='columns-container']/div/div[3]/div/div/form/p/button/span
-2020-09-03 19:55:24,540 :INFO :utilities.log :Webdriver wait 10
-2020-09-03 19:55:24,743 :INFO :utilities.log :Verifying the exact text //*[@id='order-detail-content']/table/tbody/tr/td/p/a
+2020-09-03 20:34:14,466 :INFO :utilities.log :Clicked on the element //*[@class='logo img-responsive']
+2020-09-03 20:34:14,468 :INFO :utilities.log :Webdriver wait 10
+2020-09-03 20:34:15,042 :INFO :utilities.log :Entered text element search_query_top
+2020-09-03 20:34:15,659 :INFO :utilities.log :Clicked on the element //button[@name='submit_search']
+2020-09-03 20:34:20,661 :INFO :utilities.log :Sleep time 5
+2020-09-03 20:34:26,673 :INFO :utilities.log :Sleep time 5
+2020-09-03 20:34:28,319 :INFO :utilities.log :Clicked on the element //*[@id='layer_cart']/div[1]/div[2]/div[4]/a
+2020-09-03 20:34:33,321 :INFO :utilities.log :Sleep time 5
+2020-09-03 20:34:33,516 :INFO :utilities.log :Verifying the exact text //*[@id='order-detail-content']/table/tbody/tr/td/p/a
+2020-09-03 20:34:33,518 :INFO :utilities.log :The text is <utilities.locator_strategy.LocatorStrategy object at 0x0401EE20>
+2020-09-03 20:34:35,592 :INFO :utilities.log :Clicked on the element //*[@id='center_column']/p[2]/a[1]/span
+2020-09-03 20:34:40,595 :INFO :utilities.log :Sleep time 5
+2020-09-03 20:34:43,070 :INFO :utilities.log :Clicked on the element //*[@class='columns-container']/div/div[3]/div/form/p/button/span
+2020-09-03 20:34:43,073 :INFO :utilities.log :Webdriver wait 10
+2020-09-03 20:34:43,519 :INFO :utilities.log :Clicked on the element cgv
+2020-09-03 20:34:44,650 :INFO :utilities.log :Clicked on the element //*[@class='columns-container']/div/div[3]/div/div/form/p/button/span
+2020-09-03 20:34:44,650 :INFO :utilities.log :Webdriver wait 10
+2020-09-03 20:34:44,707 :INFO :utilities.log :Verifying the exact text //*[@id='order-detail-content']/table/tbody/tr/td/p/a
+2020-09-03 20:34:46,074 :INFO :utilities.log :Clicked on the element //*[@class='bankwire']
+2020-09-03 20:34:49,381 :INFO :utilities.log :Clicked on the element #cart_navigation > button
+2020-09-03 20:34:49,602 :INFO :utilities.log :Verifying the presence of text //*[@class='box']/p
+class='columns-container']/div/div[3]/div/div/form/p/button/span
+2020-09-03 20:34:44,650 :INFO :utilities.log :Webdriver wait 10
+2020-09-03 20:34:44,707 :INFO :utilities.log :Verifying the exact text //*[@id='order-detail-content']/table/tbody/tr/td/p/a
+2020-09-03 20:34:46,074 :INFO :utilities.log :Clicked on the element //*[@class='bankwire']
+2020-09-03 20:34:49,381 :INFO :utilities.log :Clicked on the element #cart_navigation > button
+2020-09-03 20:34:49,602 :INFO :utilities.log :Verifying the presence of text //*[@class='box']/p

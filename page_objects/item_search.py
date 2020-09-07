@@ -12,6 +12,7 @@ class SearchItem(Common):
         self.driver = driver
         # d = DataRead()
         self.data = DataRead.json_read('data.json')
+        self.log = self.logger()
 
     search_field = LocatorStrategy.locator_by_id("search_query_top")
     search_button = LocatorStrategy.locator_by_xpath("//button[@name='submit_search']")
@@ -45,6 +46,7 @@ class SearchItem(Common):
     def shopping_cart_checkout(self):
         self.time_sleep(config.sleep_time)
         self.verify_exact_text(SearchItem.product_description,validatetext=self.data['dress_name'])
+        self.log.info("The text is {}".format(SearchItem.product_description))
         self.click(SearchItem.shopping_cart_checkout_button)
 
     def address_page_checkout(self):
