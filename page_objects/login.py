@@ -7,6 +7,7 @@ from selenium.webdriver.common.by import By
 from config import sleep_time, wait_time
 from page_objects.common import Common
 from utilities import driver
+from utilities.data_factory import DataRead
 from utilities.locator_strategy import LocatorStrategy
 
 
@@ -17,6 +18,7 @@ class Login(Common):
     def __init__(self, driver):
         super().__init__(driver)
         self.driver = driver
+        self.data = DataRead.json_read('data.json')
 
     login_button = LocatorStrategy.locator_by_xpath("//a[@class='login']")
     email_field = LocatorStrategy.locator_by_id("email")
@@ -36,6 +38,13 @@ class Login(Common):
         self.enter_text(Login.password_field, text=password)
         self.click(Login.submit_button)
         self.verify_element_present(Login.logout_button)
+
+    def invalid_login_verify(self):
+        self.driver_wait(wait_time)
+        self.enter_text(Login.email_field, text=self.data["invalid_email"])
+        self.enter_text(Login.password_field, text=self.data["invalid_password"])
+        self.click(Login.submit_button)
+        self.get_screenshot("Invalid Username or Password")
 
     def logout(self):
         self.click(Login.logout_button)
