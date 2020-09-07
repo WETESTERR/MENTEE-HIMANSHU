@@ -45,8 +45,6 @@ class SearchItem(Common):
 
     def shopping_cart_checkout(self):
         self.time_sleep(config.sleep_time)
-        self.verify_exact_text(SearchItem.product_description,validatetext=self.data['dress_name'])
-        self.log.info("The text is {}".format(SearchItem.product_description))
         self.click(SearchItem.shopping_cart_checkout_button)
 
     def address_page_checkout(self):
@@ -60,9 +58,15 @@ class SearchItem(Common):
 
     def confirm_order(self):
         self.driver_wait(config.wait_time)
-        self.verify_exact_text(SearchItem.product_description,validatetext=self.data['dress_name'])
         self.click(SearchItem.payment_page_button)
         self.click(SearchItem.confirm_button)
 
     def order_status(self):
         self.verify_text_present(SearchItem.complete_status, validatetext='complete')
+
+
+    def verify_product_name(self):
+        self.verify_exact_text(SearchItem.product_description, validatetext=self.data['dress_name'])
+        self.log.info("The text is {}".format(SearchItem.product_description))
+        self.verify_exact_text(SearchItem.product_description, validatetext=self.data['dress_name'])
+

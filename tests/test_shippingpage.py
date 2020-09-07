@@ -29,6 +29,7 @@ class TestShippingConfirmation:
         s.shopping_cart_checkout()
         s.address_page_checkout()
         s.shipping_page_checkout()
+        s.verify_product_name()
         s.confirm_order()
         s.order_status()
 
