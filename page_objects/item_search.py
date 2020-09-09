@@ -52,7 +52,7 @@ class SearchItem(Common):
 
 
     def address_page_checkout(self):
-
+        self.time_sleep(config.sleep_time)
         self.click(SearchItem.address_page_checkout_button)
 
 
