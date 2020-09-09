@@ -10,5 +10,6 @@
   "alias_text": "My address",
   "new_email": "himans001234567000@gmail.com",
   "invalid_email": "himss002@gmail.com",
-  "invalid_password": "abhuk123456"
+  "invalid_password": "abhuk123456",
+  "existing_email": "hs002@gmail.com"
 }
