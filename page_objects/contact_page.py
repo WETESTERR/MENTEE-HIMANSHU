@@ -27,7 +27,7 @@ class Contact(Common):
         select.select_by_index(1)
         self.clear_text(Contact.email_address)
         self.enter_text(Contact.email_address,text=self.data['contact_email'])
-        self.enter_text(Contact.upload_file,text=self.data['upload_file'])
+        self.enter_text(Contact.upload_file,text=config.file_path + self.data['upload_file'])
         self.click(Contact.send_button)
 
 
