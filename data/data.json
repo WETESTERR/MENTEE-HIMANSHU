@@ -8,8 +8,18 @@
   "postcode": "22030",
   "phone_number": "1234567890",
   "alias_text": "My address",
+
   "new_email": "himans001234567000@gmail.com",
   "invalid_email": "himss002@gmail.com",
   "invalid_password": "abhuk123456",
   "existing_email": "hs002@gmail.com"
+
+  "new_email": "himans0012334@gmail.com",
+  "contact_email": "himanshusethi002@gmail.com",
+  "upload_file": "\\Himanshu_Resume.pdf",
+  "datasheet_properties": "Maxi Dress",
+  "dress_name": "Printed Summer Dress",
+  "review_title": "Feedback",
+  "comment": "I like the dress."
+
 }

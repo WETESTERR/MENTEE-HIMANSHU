@@ -1,6 +1,7 @@
 __pycache__\
 *.pyc
 .idea/
+logs
 my_allure_results
 
 

@@ -15,7 +15,7 @@ class TestShippingConfirmation:
     @pytest.mark.smoke
     @pytest.mark.searchbar
     @pytest.mark.skip("Skip for now")
-    @pytest.mark.second
+    #@pytest.mark.second
     def test_shipping_page(self,driver):
         c = Common(driver)
         s = SearchItem(driver)
@@ -29,6 +29,7 @@ class TestShippingConfirmation:
         s.shopping_cart_checkout()
         s.address_page_checkout()
         s.shipping_page_checkout()
+        s.verify_product_name()
         s.confirm_order()
         s.order_status()
 
