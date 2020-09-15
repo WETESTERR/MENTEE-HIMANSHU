@@ -1,8 +1,9 @@
+
 import config
 from page_objects.common import Common
 from utilities.data_factory import DataRead
 from utilities.locator_strategy import LocatorStrategy
-from config import sleep_time, wait_time, test_data_path
+
 
 
 class SearchItem(Common):
