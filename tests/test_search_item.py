@@ -17,7 +17,7 @@ class TestSearchItem:
     @pytest.mark.smoke
     @pytest.mark.searchbar
     @pytest.mark.skip("Skip for now")
-    @pytest.mark.first
+    #@pytest.mark.first
     def test_searchbar(self,driver):
         c = Common(driver)
         s = SearchItem(driver)

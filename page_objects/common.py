@@ -6,7 +6,7 @@ import pytest
 from allure_commons.types import AttachmentType
 
 from selenium.webdriver.support.wait import WebDriverWait
-from selenium.webdriver.support import expected_conditions as ec
+from selenium.webdriver.support import expected_conditions as ec, expected_conditions
 from selenium.webdriver.support.ui import Select
 from selenium.webdriver import ActionChains
 from utilities import driver
@@ -19,7 +19,6 @@ class Common(Logs):
     def __init__(self, driver):
         self.driver = driver
         self.log = self.logger()
-
 
     def driver_wait(self, wait_time):
         WebDriverWait(self.driver, wait_time)
@@ -38,7 +37,6 @@ class Common(Logs):
             self.log.error('Element not found \n{}'.format(traceback.format_exc()))
             pytest.fail('Element not found \n{}'.format(traceback.format_exc()))
 
-
     def clear_text(self, locatorobject):
         _element = self.get_element(locatorobject)
         if _element:
@@ -47,7 +45,6 @@ class Common(Logs):
         else:
             self.log.error('Element not found \n{}'.format(traceback.format_exc()))
             pytest.fail('Element not found \n{}'.format(traceback.format_exc()))
-
 
     def enter_text(self, locatorobject, text):
         _element = self.get_element(locatorobject)
@@ -76,13 +73,11 @@ class Common(Logs):
             self.log.error('Element not found \n{}'.format(traceback.extract_stack()))
             pytest.fail('Element not found \n{}'.format(traceback.extract_stack()))
 
-
-
     def switch_window(self, text):
         self.log.info("Window switch {}".format(self.driver.switch_to_window(text)))
         self.driver.switch_to_default_content()
 
-    def verify_text_present(self, locatorobject,validatetext):
+    def verify_text_present(self, locatorobject, validatetext):
         _element = self.get_element(locatorobject)
         if _element:
             gettext = _element.text
@@ -92,17 +87,15 @@ class Common(Logs):
         else:
             self.log.error('Element not found \n{}'.format(traceback.format_stack()))
 
-
     def verify_exact_text(self, locatorobject, validatetext):
         _element = self.get_element(locatorobject)
         if _element:
             gettext = _element.text
             assert validatetext == gettext
-            '{} did not match with expected {}'.format(validatetext,gettext)
+            '{} did not match with expected {}'.format(validatetext, gettext)
             self.log.info("Verifying the exact text {}".format(locatorobject.name))
         else:
             self.log.error('Element not found \n{}'.format(traceback.format_exc()))
-
 
     def drag_drop(self, source, target):
         source_element = self.driver.find_element_by_name(source)
@@ -123,7 +116,8 @@ class Common(Logs):
         if locatorobject.strategy == 'id':
             return self.driver.find_element_by_id(locatorobject.name)
         elif locatorobject.strategy == 'xpath':
-            return self.driver.find_element_by_xpath(locatorobject.name)
+            return self.driver.find_element_by_xpath(locatorobject.name) or self.driver.find_elements_by_xpath(
+                locatorobject.name)
         elif locatorobject.strategy == 'css_selector':
             return self.driver.find_element_by_css_selector(locatorobject.name)
         elif locatorobject.strategy == 'class_name':
@@ -154,4 +148,5 @@ class Common(Logs):
 
     def actions(self, move1, move2):
         action = ActionChains(self.driver)
-        action.move_to_element(self.get_element(locatorobject=move1)).move_to_element(self.get_element(locatorobject=move2)).click().perform()
+        action.move_to_element(self.get_element(locatorobject=move1)).move_to_element(
+            self.get_element(locatorobject=move2)).click().perform()
