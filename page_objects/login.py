@@ -20,7 +20,7 @@ class Login(Common):
         self.driver = driver
         self.data = DataRead.json_read('data.json')
 
-    login_button = LocatorStrategy.locator_by_xpath("//a[@class='login']")
+    signin_button = LocatorStrategy.locator_by_xpath("//a[@class='login']")
     email_field = LocatorStrategy.locator_by_id("email")
     password_field = LocatorStrategy.locator_by_id("passwd")
     submit_button = LocatorStrategy.locator_by_name("SubmitLogin")
@@ -28,7 +28,7 @@ class Login(Common):
 
 
     def navigate_to_login_page(self):
-        self.click(Login.login_button)
+        self.click(Login.signin_button)
         self.get_screenshot(file_name="Login_page")
         self.time_sleep(sleep_time)
 

@@ -2,11 +2,12 @@ import pytest
 
 from page_objects.home_page import HomePage
 from page_objects.item_details import ItemDetails
+from page_objects.login import Login
 
 
 class TestProductDetails:
 
-    @pytest.mark.skip("Skip for now")
+    #@pytest.mark.skip("Skip for now")
     def test_product_details(self, driver):
         s = ItemDetails(driver)
         h = HomePage(driver)

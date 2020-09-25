@@ -26,6 +26,7 @@ class ItemDetails(Common):
     send_button = LocatorStrategy.locator_by_id("submitNewMessage")
     comment_ok = LocatorStrategy.locator_by_xpath("//*[@id='product']/div[2]/div/div/div/p[2]/button")
     add_tocart = LocatorStrategy.locator_by_name("Submit")
+    proceed_to_checkout_button = LocatorStrategy.locator_by_xpath("//*[@id='layer_cart']/div[1]/div[2]/div[4]/a")
 
     def item_search(self):
         self.enter_text(ItemDetails.search_field, text=self.data['item'])
@@ -52,6 +53,8 @@ class ItemDetails(Common):
 
     def add_item_to_cart(self):
         self.click(ItemDetails.add_tocart)
+        self.time_sleep(config.sleep_time)
+        self.click(ItemDetails.proceed_to_checkout_button)
 
 
 

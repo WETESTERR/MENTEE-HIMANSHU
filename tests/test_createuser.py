@@ -11,12 +11,10 @@ class TestCreateUser(Logs):
 
 
     @allure.story("Enter user details")
-    @pytest.mark.skip("Skip for now")
-    @pytest.mark.last
+    #@pytest.mark.skip("Skip for now")
+    @pytest.mark.first
 
-    @allure.story("Enter user details to create new account")
-    @pytest.mark.skip("Skip for now")
-    #@pytest.mark.last
+
 
     def test_createuser(self,driver,password):
         c = CreateUser(driver)
