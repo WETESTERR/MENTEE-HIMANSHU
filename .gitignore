@@ -2,6 +2,7 @@ __pycache__\
 *.pyc
 .idea/
 logs
+geckodriver.log
 my_allure_results
 
 
