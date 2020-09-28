@@ -8,7 +8,7 @@ from page_objects.login import Login
 class TestInvalidlogin:
 
     @allure.story("Login with invalid credentials fails")
-    #@pytest.mark.skip("Skip for now")
+    @pytest.mark.skip("Skip for now")
     @pytest.mark.last
     def test_invalid_login(self,driver):
         l = Login(driver)

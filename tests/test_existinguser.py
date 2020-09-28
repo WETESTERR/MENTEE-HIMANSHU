@@ -8,7 +8,7 @@ from page_objects.login import Login
 class TestExistingUser:
 
     @allure.story("Entering existing user to create new user fails")
-    #@pytest.mark.skip("Skip for now")
+    @pytest.mark.skip("Skip for now")
     @pytest.mark.second_to_last
     def test_existing_user(self,driver):
         e = ExistingUser(driver)

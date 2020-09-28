@@ -11,7 +11,7 @@ class TestCreateUser(Logs):
 
 
     @allure.story("Enter user details")
-    #@pytest.mark.skip("Skip for now")
+    @pytest.mark.skip("Skip for now")
     @pytest.mark.first
 
 
