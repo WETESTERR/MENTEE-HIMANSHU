@@ -150,3 +150,9 @@ class Common(Logs):
         action = ActionChains(self.driver)
         action.move_to_element(self.get_element(locatorobject=move1)).move_to_element(
             self.get_element(locatorobject=move2)).click().perform()
+
+
+    def get_text(self,locatorobject):
+        return self.log.info("The Printed text is {}".format(self.get_element(locatorobject).text))
+
+
