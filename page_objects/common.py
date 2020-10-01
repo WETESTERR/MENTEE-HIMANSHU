@@ -107,15 +107,6 @@ class Common(Logs):
         self.log.info("Drag and Drop {}".format(action_chains.drag_and_drop(source_element, target_element).perform()))
 
 
-
-    def drag_drop_offset(self, source,x,y):
-        source_element = self.driver.find_element_by_name(source)
-        self.log.info("Grabbed the source element {}".format(source_element))
-
-        action_chains = ActionChains(driver)
-        self.log.info("Drag and Drop {}".format(action_chains.drag_and_drop_by_offset(source,x,y).perform()))
-
-
     def log_test_start(self):
         pass
 
