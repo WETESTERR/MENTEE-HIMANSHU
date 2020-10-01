@@ -14,4 +14,4 @@ class Womentab(Common):
 
     def slider_range(self):
         self.click(Womentab.women_tab)
-        self.ac
+        self.drag_drop_offset(Womentab.left_slider,150,100)
