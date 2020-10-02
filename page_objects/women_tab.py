@@ -1,3 +1,4 @@
+import config
 from page_objects.common import Common
 from utilities.locator_strategy import LocatorStrategy
 
@@ -14,4 +15,5 @@ class Womentab(Common):
 
     def slider_range(self):
         self.click(Womentab.women_tab)
+        self.time_sleep(config.sleep_time)
         self.drag_drop_offset(Womentab.left_slider,150,100)
