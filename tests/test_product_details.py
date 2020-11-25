@@ -7,7 +7,7 @@ from page_objects.login import Login
 
 class TestProductDetails:
 
-    #@pytest.mark.skip("Skip for now")
+    @pytest.mark.skip("Skip for now")
     def test_product_details(self, driver):
         s = ItemDetails(driver)
         h = HomePage(driver)

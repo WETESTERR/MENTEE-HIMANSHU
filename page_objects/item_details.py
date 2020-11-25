@@ -15,6 +15,10 @@ class ItemDetails(Common):
     search_button = LocatorStrategy.locator_by_xpath("//button[@name='submit_search']")
     more_options = LocatorStrategy.locator_by_xpath("//div[@class='product-container']/div[2]/div[2]/a[@title='View']")
     select_size = LocatorStrategy.locator_by_id("group_1")
+    add_quantity_tab = LocatorStrategy.locator_by_xpath("//*[@class='box-info-product']/div[2]/p/a[2]")
+    quantity_field = LocatorStrategy.locator_by_id("quantity_wanted")
+    null_quantity_text = LocatorStrategy.locator_by_xpath("//*[@class='fancybox-outer']/div/p")
+    null_quantity_cancel = LocatorStrategy.locator_by_xpath("//*[@title='Close']")
     products = LocatorStrategy.locator_by_xpath("//div[@class='product-container']/div[1]/div/a/img")
     prod_name = LocatorStrategy.locator_by_xpath("//*[@id='center_column']/ul/li[3]/div/div[2]/h5/a")
     datasheet_properties = LocatorStrategy.locator_by_xpath("//*[@class='page-product-box']/table/tbody/tr[3]/td[2]")
@@ -39,8 +43,7 @@ class ItemDetails(Common):
         select.select_by_index(1)
         self.click(ItemDetails.change_color)
         self.verify_exact_text(ItemDetails.datasheet_properties, validatetext=self.data['datasheet_properties'])
-        self.verify_exact_text(ItemDetails.dress_name,validatetext=self.data['dress_name'])
-
+        self.verify_exact_text(ItemDetails.dress_name, validatetext=self.data['dress_name'])
 
     def product_review_form(self):
         self.click(ItemDetails.write_review)
@@ -50,11 +53,19 @@ class ItemDetails(Common):
         self.time_sleep(config.sleep_time)
         self.click(ItemDetails.comment_ok)
 
-
     def add_item_to_cart(self):
         self.click(ItemDetails.add_tocart)
         self.time_sleep(config.sleep_time)
         self.click(ItemDetails.proceed_to_checkout_button)
 
+    def add_quantity(self):
+        self.time_sleep(config.sleep_time)
+        self.click(ItemDetails.add_quantity_tab)
 
-
+    def delete_quantity(self):
+        self.clear_text(ItemDetails.quantity_field)
+        self.enter_text(ItemDetails.quantity_field, text=self.data['negative_quantity'])
+        self.click(ItemDetails.add_tocart)
+        self.time_sleep(config.sleep_time)
+        self.get_text(ItemDetails.null_quantity_text)
+        self.click(ItemDetails.null_quantity_cancel)

@@ -1,0 +1,14 @@
+[
+  "test_browser.py::TestBrowser::test_sample",
+  "test_contactus.py::TestContactUs::test_contactus_page",
+  "test_createuser.py::TestCreateUser::test_createuser",
+  "test_existinguser.py::TestExistingUser::test_existing_user",
+  "test_invalidlogin.py::TestInvalidlogin::test_invalid_login",
+  "test_login.py::TestLogin::test_login",
+  "test_product_details.py::TestProductDetails::test_product_details",
+  "test_quantity_validation.py::TestQuantity::test_add_quantity",
+  "test_quantity_validation.py::TestQuantity::test_negative_quantity",
+  "test_search_item.py::TestSearchItem::test_searchbar",
+  "test_shipping_page.py::TestShippingConfirmation::test_shipping_page",
+  "test_slider.py::TestSliderRange::test_slider_range_functionality"
+]
